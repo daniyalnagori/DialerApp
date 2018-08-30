@@ -50,7 +50,7 @@ class CallingScreen extends Component {
               </View>
 
               <View>
-                <TouchableOpacity activeOpacity={0.5} onPress={() => this.props.navigation.navigate('FooterTabsIconTextExample')} style={{ width: 80, height: 80, borderRadius: 100, alignSelf: 'center' }}>
+                <TouchableOpacity activeOpacity={0.5} onPress={() => this.props.navigation.navigate('Footer')} style={{ width: 80, height: 80, borderRadius: 100, alignSelf: 'center' }}>
                   <Image source={require('../../assets/Android/4x/declinexxxhdpi.png')} style={{ width: 80, height: 80, borderRadius: 100, alignSelf: 'center' }} />
                 </TouchableOpacity>
                 <Text style={{ fontSize: 17, textAlign: 'center', color: "white", marginTop: '2%' }}>Decline</Text>

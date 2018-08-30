@@ -2,7 +2,7 @@ import React from 'react'
 import {
   App, CallingScreen, CallScreen, DialerScreen, FooterTabsIconTextExample
 } from './../components/index';
-import { StackNavigator, DrawerNavigator, NavigationActions, TabNavigator } from "react-navigation";
+import { StackNavigator, DrawerNavigator } from "react-navigation";
 
 
 const Drawer = DrawerNavigator({
@@ -18,10 +18,10 @@ const Drawer = DrawerNavigator({
 }, { drawerWidth: 200 })
 
 const NavigationApp = StackNavigator({
-  DialerScreen: {
+  Footer: {
     screen: FooterTabsIconTextExample,
     navigationOptions: {
-      header: null,
+      header: null
     }
   },
   CallScreen: {
