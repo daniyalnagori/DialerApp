@@ -1,14 +1,8 @@
 import React from 'react'
-
-// import {
-//   App,
-//   Signup
-// } from './../components/index';
 import {
   App, CallingScreen, CallScreen, DialerScreen, FooterTabsIconTextExample
 } from './../components/index';
 import { StackNavigator, DrawerNavigator, NavigationActions, TabNavigator } from "react-navigation";
-// import history from '../components/History'
 
 
 const Drawer = DrawerNavigator({
