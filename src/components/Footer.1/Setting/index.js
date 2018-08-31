@@ -10,12 +10,12 @@ import {
 
 const { width } = Dimensions.get('window');
 
-class CallScreen extends Component {
+class Setting extends Component {
   constructor(props) {
     super(props);
   }
   static navigationOptions = {
-    title: "Contacts"
+    title: "Setting"
   };
 
   render() {
@@ -36,4 +36,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CallScreen;
+export default Setting;

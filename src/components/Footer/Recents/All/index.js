@@ -21,19 +21,11 @@ class All extends Component {
         return (
             <View style={styles.container}>
 
-                <View style={{ height: "8%", justifyContent: 'center', borderBottomColor: '#e6e6e6', borderBottomWidth: 0.5 }}>
-                    <View style={{ width: width / 2, alignSelf: 'center', flexDirection: "row", justifyContent: "space-around", borderRadius: 4, height: width / 15, borderWidth: 2, borderColor: '#ef3f7d' }}>
-                        <View style={{ width: width / 4, backgroundColor: '#ef3f7d', justifyContent: "center" }}><Text style={{ color: 'white', alignSelf: 'center', }}>All</Text></View>
-                        <View style={{ width: width / 4, justifyContent: "center" }}><Text style={{ color: '#ef3f7d', alignSelf: 'center' }}>Missed</Text></View>
-                    </View>
-                </View>
-
-
                 <View style={{ justifyContent: 'space-between', alignSelf: 'center', flexDirection: "row", width: width, height: "10%", borderBottomColor: '#e6e6e6', borderBottomWidth: 0.5 }}>
 
                     <View style={{ justifyContent: "flex-start", flexDirection: "row" }}>
                         <View style={{ justifyContent: "center", padding: 10 }}>
-                            <Image source={require('../../../assets/Android/4x/Call_selectedxxxhdpi.png')} style={{ width: width / 30, height: width / 30 }} />
+                            <Image source={require('../../../../assets/Android/4x/Call_selectedxxxhdpi.png')} style={{ width: width / 30, height: width / 30 }} />
                         </View>
 
                         <View style={{ justifyContent: 'center' }}>
@@ -48,7 +40,7 @@ class All extends Component {
                         </View>
 
                         <View style={{ justifyContent: "center", padding: 10 }}>
-                            <Image source={require('../../../assets/Android/4x/Infoxxxhdpi.png')} style={{ width: width / 27, height: width / 27 }} />
+                            <Image source={require('../../../../assets/Android/4x/Infoxxxhdpi.png')} style={{ width: width / 27, height: width / 27 }} />
                         </View>
                     </View>
 
@@ -61,7 +53,7 @@ class All extends Component {
 
                     <View style={{ justifyContent: "flex-start", flexDirection: "row" }}>
                         <View style={{ justifyContent: "center", padding: 10 }}>
-                            <Image source={require('../../../assets/Android/4x/Call_selectedxxxhdpi.png')} style={{ width: width / 30, height: width / 30 }} />
+                            <Image source={require('../../../../assets/Android/4x/Call_selectedxxxhdpi.png')} style={{ width: width / 30, height: width / 30 }} />
                         </View>
 
                         <View style={{ justifyContent: 'center' }}>
@@ -76,7 +68,7 @@ class All extends Component {
                         </View>
 
                         <View style={{ justifyContent: "center", padding: 10 }}>
-                            <Image source={require('../../../assets/Android/4x/Infoxxxhdpi.png')} style={{ width: width / 27, height: width / 27 }} />
+                            <Image source={require('../../../../assets/Android/4x/Infoxxxhdpi.png')} style={{ width: width / 27, height: width / 27 }} />
                         </View>
                     </View>
 
@@ -90,7 +82,7 @@ class All extends Component {
 
                     <View style={{ justifyContent: "flex-start", flexDirection: "row" }}>
                         <View style={{ justifyContent: "center", padding: 10 }}>
-                            <Image source={require('../../../assets/Android/4x/Call_selectedxxxhdpi.png')} style={{ width: width / 30, height: width / 30 }} />
+                            <Image source={require('../../../../assets/Android/4x/Call_selectedxxxhdpi.png')} style={{ width: width / 30, height: width / 30 }} />
                         </View>
 
                         <View style={{ justifyContent: 'center' }}>
@@ -105,7 +97,7 @@ class All extends Component {
                         </View>
 
                         <View style={{ justifyContent: "center", padding: 10 }}>
-                            <Image source={require('../../../assets/Android/4x/Infoxxxhdpi.png')} style={{ width: width / 27, height: width / 27 }} />
+                            <Image source={require('../../../../assets/Android/4x/Infoxxxhdpi.png')} style={{ width: width / 27, height: width / 27 }} />
                         </View>
                     </View>
 
@@ -118,7 +110,7 @@ class All extends Component {
 
                     <View style={{ justifyContent: "flex-start", flexDirection: "row" }}>
                         <View style={{ justifyContent: "center", padding: 10 }}>
-                            <Image source={require('../../../assets/Android/4x/Call_selectedxxxhdpi.png')} style={{ width: width / 30, height: width / 30 }} />
+                            <Image source={require('../../../../assets/Android/4x/Call_selectedxxxhdpi.png')} style={{ width: width / 30, height: width / 30 }} />
                         </View>
 
                         <View style={{ justifyContent: 'center' }}>
@@ -133,7 +125,7 @@ class All extends Component {
                         </View>
 
                         <View style={{ justifyContent: "center", padding: 10 }}>
-                            <Image source={require('../../../assets/Android/4x/Infoxxxhdpi.png')} style={{ width: width / 27, height: width / 27 }} />
+                            <Image source={require('../../../../assets/Android/4x/Infoxxxhdpi.png')} style={{ width: width / 27, height: width / 27 }} />
                         </View>
                     </View>
 
@@ -146,7 +138,7 @@ class All extends Component {
 
                     <View style={{ justifyContent: "flex-start", flexDirection: "row" }}>
                         <View style={{ justifyContent: "center", padding: 10 }}>
-                            <Image source={require('../../../assets/Android/4x/Call_selectedxxxhdpi.png')} style={{ width: width / 30, height: width / 30 }} />
+                            <Image source={require('../../../../assets/Android/4x/Call_selectedxxxhdpi.png')} style={{ width: width / 30, height: width / 30 }} />
                         </View>
 
                         <View style={{ justifyContent: 'center' }}>
@@ -161,7 +153,7 @@ class All extends Component {
                         </View>
 
                         <View style={{ justifyContent: "center", padding: 10 }}>
-                            <Image source={require('../../../assets/Android/4x/Infoxxxhdpi.png')} style={{ width: width / 27, height: width / 27 }} />
+                            <Image source={require('../../../../assets/Android/4x/Infoxxxhdpi.png')} style={{ width: width / 27, height: width / 27 }} />
                         </View>
                     </View>
 
@@ -174,7 +166,7 @@ class All extends Component {
 
                     <View style={{ justifyContent: "flex-start", flexDirection: "row" }}>
                         <View style={{ justifyContent: "center", padding: 10 }}>
-                            <Image source={require('../../../assets/Android/4x/Call_selectedxxxhdpi.png')} style={{ width: width / 30, height: width / 30 }} />
+                            <Image source={require('../../../../assets/Android/4x/Call_selectedxxxhdpi.png')} style={{ width: width / 30, height: width / 30 }} />
                         </View>
 
                         <View style={{ justifyContent: 'center' }}>
@@ -189,7 +181,7 @@ class All extends Component {
                         </View>
 
                         <View style={{ justifyContent: "center", padding: 10 }}>
-                            <Image source={require('../../../assets/Android/4x/Infoxxxhdpi.png')} style={{ width: width / 27, height: width / 27 }} />
+                            <Image source={require('../../../../assets/Android/4x/Infoxxxhdpi.png')} style={{ width: width / 27, height: width / 27 }} />
                         </View>
                     </View>
 
@@ -201,7 +193,7 @@ class All extends Component {
 
                     <View style={{ justifyContent: "flex-start", flexDirection: "row" }}>
                         <View style={{ justifyContent: "center", padding: 10 }}>
-                            <Image source={require('../../../assets/Android/4x/Call_selectedxxxhdpi.png')} style={{ width: width / 30, height: width / 30 }} />
+                            <Image source={require('../../../../assets/Android/4x/Call_selectedxxxhdpi.png')} style={{ width: width / 30, height: width / 30 }} />
                         </View>
 
                         <View style={{ justifyContent: 'center' }}>
@@ -216,7 +208,7 @@ class All extends Component {
                         </View>
 
                         <View style={{ justifyContent: "center", padding: 10 }}>
-                            <Image source={require('../../../assets/Android/4x/Infoxxxhdpi.png')} style={{ width: width / 27, height: width / 27 }} />
+                            <Image source={require('../../../../assets/Android/4x/Infoxxxhdpi.png')} style={{ width: width / 27, height: width / 27 }} />
                         </View>
                     </View>
 

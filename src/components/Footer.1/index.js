@@ -1,43 +1,43 @@
 import React from 'react';
-import DialerScreen from './DialerScreen'
-import Recents from './Recents'
-import Favourites from './Favourites'
-import Contacts from './Contacts'
-import More from './More'
+import Status from './Status'
+import Calls from './Calls'
+import Camera from './Camera'
+import Chat from './Chat'
+import Setting from './Setting'
 import { View, Button, Text, Image, Dimensions } from 'react-native';
 import { createBottomTabNavigator, createStackNavigator } from 'react-navigation';
 
 const { width } = Dimensions.get('window');
 
 
-const FavaouritesStack = createStackNavigator({
-    Favaourites: Favourites,
+const CallsStack = createStackNavigator({
+    Calls: Calls,
 });
 
-const RecentsStack = createStackNavigator({
-    Recents: Recents,
+const CameraStack = createStackNavigator({
+    Camera: Camera,
 });
 
-const ContactsStack = createStackNavigator({
-    Contacts: Contacts,
+const ChatStack = createStackNavigator({
+    Chat: Chat,
 });
 
-const KeypadStack = createStackNavigator({
-    Keypad: DialerScreen,
+const SettingStack = createStackNavigator({
+    Setting: Setting,
 });
 
-const MoreStack = createStackNavigator({
-    More: More,
+const StatusStack = createStackNavigator({
+    Status: Status,
 });
 
 
 export default createBottomTabNavigator(
     {
-        Favaourites: FavaouritesStack,
-        Recents: RecentsStack,
-        Contacts: ContactsStack,
-        Keypad: KeypadStack,
-        More: MoreStack,
+        Status: CallsStack,
+        Calls: CameraStack,
+        Camera: ChatStack,
+        Chat: SettingStack,
+        Setting: StatusStack,
     },
     {
         navigationOptions: ({ navigation }) => ({
@@ -47,13 +47,13 @@ export default createBottomTabNavigator(
                 if (routeName === 'Favaourites') {
                     iconName = focused ? require('../../assets/Android/4x/Favourites_selectedxxxhdpi.png') : require('../../assets/Android/4x/Favouritesxxxhdpi.png')
                 } else if (routeName === 'Recents') {
-                    iconName = focused ? require('../../assets/Android/4x/recents_selectedxxxhdpi.png') : require('../../assets/Android/4x/Recents_Iconxxxhdpi.png');
+                    iconName = focused ? require('../../assets/Android/4x/Call_selectedxxxhdpi.png') : require('../../assets/Android/4x/Call_selectedxxxhdpi.png');
                 } else if (routeName === 'Contacts') {
-                    iconName = focused ? require('../../assets/Android/4x/contacts_selectexxxhdpi.png') : require('../../assets/Android/4x/Contacts_Iconxxxhdpi.png');
+                    iconName = focused ? require('../../assets/Android/4x/Iconxxxhdpi.png') : require('../../assets/Android/4x/cameraxxxhdpi.png');
                 } else if (routeName === 'Keypad') {
-                    iconName = focused ? require('../../assets/Android/4x/keypad_seclectedxxxhdpi.png') : require('../../assets/Android/4x/Keypadxxxhdpi.png');
+                    iconName = focused ? require('../../assets/Android/4x/chat_selectedxxxhdpi.png') : require('../../assets/Android/4x/chatxxxhdpi.png');
                 } else if (routeName === 'More') {
-                    iconName = focused ? require('../../assets/Android/4x/menu_selctedxxxhdpi.png') : require('../../assets/Android/4x/menuxxxhdpi.png');
+                    iconName = focused ? require('../../assets/Android/4x/settings_seclectedxxxhdpi.png') : require('../../assets/Android/4x/settingsxxxhdpi.png');
                 }
 
                 // You can return any component that you like here! We usually use an
