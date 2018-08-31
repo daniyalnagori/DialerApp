@@ -1,58 +1,76 @@
 import React, { Component } from 'react';
 import {
   StyleSheet,
-  Text,
+  // Text,
   View,
   Dimensions,
-  Button,
+  // Button,
+  TouchableOpacity,
   Image
 } from 'react-native';
 import Missed from './Missed'
 import All from './All'
 import { createStackNavigator } from "react-navigation";
 const { width } = Dimensions.get('window');
+import { Container, Header, Left, Body, Right, Button, Title, Icon, Segment, Content, Text } from 'native-base';
 
-const KeypadStack = createStackNavigator({
-  All: All,
-  Missed: Missed,
-});
+// const AllStack = createStackNavigator({
+//   All,
+// });
+
+// const MissedStack = createStackNavigator({
+//   Missed,
+// });
+
+
 
 class Recents extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      All: true,
+      Allbgcolor: '#ef3f7d',
+      Missedbgcolor: '#ffffff',
+      AllTextColor: '#ffffff',
+      MissedTextColor: '#ef3f7d'
+    }
   }
-  static navigationOptions = {
-    title: "Recents",
-    headerStyle: {
-      backgroundColor: '#713F92',
-    },
-    headerTitleStyle: {
-      textAlign: 'center',
-      color: 'white',
-      justifyContent: 'center',
-      alignSelf: 'center',
-      justifyContent: 'space-between',
-    },
-    headerRight: (
-      <Button
-        title="+1"
-        color="white"
-      />
-    ),
-  }
+
+
+
+
 
   render() {
     return (
       <View style={styles.container}>
 
+        <Header style={{ backgroundColor: '#713F92' }}>
+          <Body style={{ alignItems: 'center' }}>
+            <Title>Recents</Title>
+          </Body>
+        </Header>
+
         <View style={{ height: "8%", justifyContent: 'center', borderBottomColor: '#e6e6e6', borderBottomWidth: 0.5 }}>
-          <View style={{ width: width / 2, alignSelf: 'center', flexDirection: "row", justifyContent: "space-around", borderRadius: 4, height: width / 15, borderWidth: 2, borderColor: '#ef3f7d' }}>
-            <View style={{ width: width / 4, backgroundColor: '#ef3f7d', justifyContent: "center" }}><Text onPress={() => this.props.navigation.navigate('All')} style={{ color: 'white', alignSelf: 'center', }}>All</Text></View>
-            <View style={{ width: width / 4, justifyContent: "center" }}><Text onPress={() => this.props.navigation.navigate('Missed')} style={{ color: '#ef3f7d', alignSelf: 'center' }}>Missed</Text></View>
+          <View style={{ width: width / 2, alignSelf: 'center', flexDirection: "row", justifyContent: "space-around", borderRadius: 4, borderWidth: 2, borderColor: '#ef3f7d' }}>
+
+            <TouchableOpacity activeOpacity={0.5} onPress={() => this.setState({ All: true, Allbgcolor: '#ef3f7d', Missedbgcolor: '#ffffff', AllTextColor: '#ffffff', MissedTextColor: '#ef3f7d' })} >
+              <View style={{ width: width / 4, backgroundColor: this.state.Allbgcolor, justifyContent: "center" }}>
+                <Text style={{ color: this.state.AllTextColor, alignSelf: 'center', }}>All</Text>
+              </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity activeOpacity={0.5} onPress={() => this.setState({ All: false, Allbgcolor: '#ffffff', Missedbgcolor: '#ef3f7d', AllTextColor: '#ef3f7d', MissedTextColor: '#ffffff' })} >
+              <View style={{ width: width / 4, justifyContent: "center", backgroundColor: this.state.Missedbgcolor }}>
+                <Text style={{ color: this.state.MissedTextColor, alignSelf: 'center' }}>Missed</Text>
+              </View>
+            </TouchableOpacity>
+
           </View>
         </View>
 
-        <All />
+        {this.state.All ? <All /> : <Missed />}
+
+
       </View >
     );
   }

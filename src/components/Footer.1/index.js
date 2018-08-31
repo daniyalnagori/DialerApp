@@ -33,32 +33,47 @@ const StatusStack = createStackNavigator({
 
 export default createBottomTabNavigator(
     {
-        Status: CallsStack,
-        Calls: CameraStack,
-        Camera: ChatStack,
-        Chat: SettingStack,
-        Setting: StatusStack,
+        Status: StatusStack,
+        Calls: CallsStack,
+        Camera: CameraStack,
+        Chat: ChatStack,
+        Setting: SettingStack,
     },
     {
+
+        headerMode: null,
+        header: null,
         navigationOptions: ({ navigation }) => ({
+            headerMode: null,
+            header: null,
             tabBarIcon: ({ focused }) => {
                 const { routeName } = navigation.state;
                 let iconName;
-                if (routeName === 'Favaourites') {
+                if (routeName === 'Status') {
                     iconName = focused ? require('../../assets/Android/4x/Favourites_selectedxxxhdpi.png') : require('../../assets/Android/4x/Favouritesxxxhdpi.png')
-                } else if (routeName === 'Recents') {
+                    size = width / 18
+                    sizew = width / 18
+                } else if (routeName === 'Calls') {
                     iconName = focused ? require('../../assets/Android/4x/Call_selectedxxxhdpi.png') : require('../../assets/Android/4x/Call_selectedxxxhdpi.png');
-                } else if (routeName === 'Contacts') {
+                    size = width / 18
+                    sizew = width / 18
+                } else if (routeName === 'Camera') {
                     iconName = focused ? require('../../assets/Android/4x/Iconxxxhdpi.png') : require('../../assets/Android/4x/cameraxxxhdpi.png');
-                } else if (routeName === 'Keypad') {
+                    size = width / 22
+                    sizew = width / 18
+                } else if (routeName === 'Chat') {
                     iconName = focused ? require('../../assets/Android/4x/chat_selectedxxxhdpi.png') : require('../../assets/Android/4x/chatxxxhdpi.png');
-                } else if (routeName === 'More') {
+                    size = width / 21
+                    sizew = width / 18
+                } else if (routeName === 'Setting') {
                     iconName = focused ? require('../../assets/Android/4x/settings_seclectedxxxhdpi.png') : require('../../assets/Android/4x/settingsxxxhdpi.png');
+                    size = width / 18
+                    sizew = width / 18
                 }
 
                 // You can return any component that you like here! We usually use an
                 // icon component from react-native-vector-icons
-                return <Image source={iconName} style={{ width: width / 19, height: width / 19 }} />;
+                return <Image source={iconName} style={{ width: sizew, height: size, padding: "2%" }} />;
 
 
             },

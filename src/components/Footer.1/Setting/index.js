@@ -14,9 +14,19 @@ class Setting extends Component {
   constructor(props) {
     super(props);
   }
-  static navigationOptions = {
-    title: "Setting"
-  };
+  // static navigationOptions = {
+  //   title: "Setting",
+  //   headerStyle: {
+  //     backgroundColor: '#713F92',
+  //   },
+  //   headerTitleStyle: {
+  //     textAlign: 'center',
+  //     color: 'white',
+  //     justifyContent: 'center',
+  //     alignSelf: 'center',
+  //     justifyContent: 'space-between',
+  //   },
+  // };
 
   render() {
     return (

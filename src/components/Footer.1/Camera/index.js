@@ -14,9 +14,19 @@ class Camera extends Component {
   constructor(props) {
     super(props);
   }
-  static navigationOptions = {
-    title: "Camera"
-  };
+  // static navigationOptions = {
+  //   title: "Camera",
+  //   headerStyle: {
+  //     backgroundColor: '#713F92',
+  //   },
+  //   headerTitleStyle: {
+  //     textAlign: 'center',
+  //     color: 'white',
+  //     justifyContent: 'center',
+  //     alignSelf: 'center',
+  //     justifyContent: 'space-between',
+  //   },
+  // };
 
   render() {
     return (

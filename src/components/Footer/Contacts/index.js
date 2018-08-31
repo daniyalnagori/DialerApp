@@ -7,80 +7,113 @@ import {
   TouchableOpacity,
   Dimensions,
 } from 'react-native';
-import { Content, List, Left, ListItem, Container, Right, Header, Item, Center, Input, Icon, Button, Text } from 'native-base';
+import { Content, List, Left, Body, ListItem, Title, Container, Right, Header, Item, Center, Input, Icon, Button, Text } from 'native-base';
+import InsideContact from './InsideContact'
 
+const { width, height } = Dimensions.get('window');
 
-const { width } = Dimensions.get('window');
-
-class CallScreen extends Component {
+class Contacts extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      Contacts: true
+    }
   }
 
-  static navigationOptions = {
-    title: "Contacts",
-    headerStyle: {
-      backgroundColor: '#713F92',
-    },
-    headerTitleStyle: {
-      textAlign: 'center',
-      color: 'white',
-      justifyContent: 'center',
-      alignSelf: 'center',
-      justifyContent: 'space-between',
-    },
-    headerRight: (
-      <Button
-        title="+1"
-        color="white"
-      />
-    ),
+  backfunction = () => {
+    this.setState({
+      Contacts: true
+    })
   }
+
+
+  // static navigationOptions = {
+  //   title: "Contacts",
+  //   headerStyle: {
+  //     backgroundColor: '#713F92',
+  //   },
+  //   headerTitleStyle: {
+  //     textAlign: 'center',
+  //     color: 'white',
+  //     justifyContent: 'center',
+  //     alignSelf: 'center',
+  //   },
+  //   headerRight: (
+  //     <Button
+  //       title="+1"
+  //       color="white"
+  //     />
+  //   ),
+  // }
+
+
 
   render() {
     return (
       <View style={styles.container}>
-        <Header style={{ backgroundColor: '#e6e6e6' }} searchBar rounded>
-          <Item>
-            <Icon style={{ color: '#e6e6e6' }} name="ios-search" />
-            <Input style={{ textAlign: 'center' }} placeholder="Search" />
-          </Item>
-        </Header>
+        {this.state.Contacts ?
 
-
-        <Container>
           <Content>
-            <List>
-              <ListItem itemDivider>
-                <Text style={{ color: '#ef3f7d' }}>A</Text>
-              </ListItem>
-              <ListItem>
-                <Left>
-                  <Text>Aaron Bennet</Text>
-                </Left>
-                {/* <Right>
-                  <Text>A</Text>
-                </Right> */}
-              </ListItem>
-              <ListItem>
-                <Left>
-                  <Text>Ali Connors</Text>
-                </Left>
-              </ListItem>
-              <ListItem itemDivider>
-                <Text style={{ color: '#ef3f7d' }}>B</Text>
-              </ListItem>
-              <ListItem>
-                <Left>
-                  <Text>Bradley Horowitz</Text>
-                </Left>
-                {/* <Right>
-                  <Text>A</Text>
-                </Right> */}
-              </ListItem>
-            </List>
+            <Header style={{ backgroundColor: '#713F92', flexDirection: 'row', justifyContent: 'space-between' }}>
+
+              <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+                <Text style={{ color: '#ffffff' }}>Groups</Text>
+              </View>
+
+              <Title style={{ alignSelf: 'center' }}>Contacts</Title>
+
+              <View style={{ borderRadius: (width / 15) / 2, width: width / 15, height: width / 15, color: '#fffff', alignItems: "center", borderColor: '#ffffff', borderWidth: 1, alignSelf: 'center' }}>
+                <Icon style={{ color: '#ffffff' }} name="add" />
+              </View>
+
+            </Header>
+
+            <Content>
+              <View style={{ paddingTop: 10, paddingRight: 10, paddingLeft: 10, paddingBottom: 10, backgroundColor: '#e6e6e6', height: height / 12, }}>
+                <View style={{ backgroundColor: "#ffffff", borderRadius: 5, height: "100%", width: "100%", justifyContent: "center", flexDirection: "row", alignItems: "center" }} >
+                  <Icon style={{ color: '#e6e6e6', paddingLeft: '1%' }} name="ios-search" />
+                  <Input style={{ textAlign: 'center', color: "#000000", minHeight: height / 14 }} placeholder="Search" placeholderTextColor="#00000" />
+                </View>
+              </View>
+            </Content>
+
+
+            <Container>
+              <Content>
+                <List>
+
+                  <ListItem itemDivider>
+                    <Text style={{ color: '#ef3f7d' }}>A</Text>
+                  </ListItem>
+
+                  <ListItem onPress={() => this.setState({ Contacts: false })}>
+                    <Left>
+                      <Text>Aaron Bennet</Text>
+                    </Left>
+                  </ListItem>
+
+                  <ListItem onPress={() => this.setState({ Contacts: false })}>
+                    <Left>
+                      <Text>Ali Connors</Text>
+                    </Left>
+                  </ListItem>
+
+                  <ListItem itemDivider>
+                    <Text style={{ color: '#ef3f7d' }}>B</Text>
+                  </ListItem>
+
+                  <ListItem onPress={() => this.setState({ Contacts: false })}>
+                    <Left>
+                      <Text>Bradley Horowitz</Text>
+                    </Left>
+                  </ListItem>
+
+                </List>
+              </Content>
+            </Container>
           </Content>
-        </Container>
+          :
+          <InsideContact backfunction={this.backfunction} />}
       </View >
     );
   }
@@ -93,4 +126,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CallScreen;
+export default Contacts;

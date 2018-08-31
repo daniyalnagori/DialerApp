@@ -11,24 +11,44 @@ const { width } = Dimensions.get('window');
 
 
 const FavaouritesStack = createStackNavigator({
-    Favaourites: Favourites,
-});
+    Favaourites: Favourites
+},
+    {
+        headerMode: "none",
+        header: null,
+    });
 
 const RecentsStack = createStackNavigator({
     Recents: Recents,
-});
+
+}, {
+        headerMode: "none",
+        header: null,
+    });
 
 const ContactsStack = createStackNavigator({
     Contacts: Contacts,
-});
+
+}, {
+        headerMode: "none",
+        header: null,
+    });
 
 const KeypadStack = createStackNavigator({
     Keypad: DialerScreen,
-});
+
+}, {
+        headerMode: "none",
+        header: null,
+    });
 
 const MoreStack = createStackNavigator({
     More: More,
-});
+}, {
+        headerMode: "none",
+        header: null,
+    });
+
 
 
 export default createBottomTabNavigator(
@@ -39,7 +59,9 @@ export default createBottomTabNavigator(
         Keypad: KeypadStack,
         More: MoreStack,
     },
+
     {
+
         navigationOptions: ({ navigation }) => ({
             tabBarIcon: ({ focused }) => {
                 const { routeName } = navigation.state;

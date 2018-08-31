@@ -7,7 +7,6 @@ import {
     Button,
     Image
 } from 'react-native';
-import { createStackNavigator } from "react-navigation";
 const { width } = Dimensions.get('window');
 
 

@@ -18,16 +18,19 @@ const Drawer = DrawerNavigator({
 }, { drawerWidth: 200 })
 
 const NavigationApp = StackNavigator({
+  Footer: {
+    screen: FooterTabs,
+    navigationOptions:{
+      headerMode:"none",
+      header: null,
+    },
+
+  },
   Footer1: {
     screen: FooterTabs1,
     navigationOptions: {
-      header: null
-    }
-  },
-  Footer: {
-    screen: FooterTabs,
-    navigationOptions: {
-      header: null
+      header: null,
+      headerMode: null,
     }
   },
   CallScreen: {
