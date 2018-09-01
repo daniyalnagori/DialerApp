@@ -14,26 +14,10 @@ class Status extends Component {
   constructor(props) {
     super(props);
   }
-  // static navigationOptions = {
-  //   title: "Status",
-  //   headerStyle: {
-  //     backgroundColor: '#713F92',
-  //   },
-  //   headerTitleStyle: {
-  //     textAlign: 'center',
-  //     color: 'white',
-  //     justifyContent: 'center',
-  //     alignSelf: 'center',
-  //     justifyContent: 'space-between',
-  //   },
-  // };
 
   render() {
     return (
       <View style={styles.container}>
-        <Text onPress={()=> this.props.navigation.navigate('Footer')}>
-          Hello
-         </Text>
       </View >
     );
   }

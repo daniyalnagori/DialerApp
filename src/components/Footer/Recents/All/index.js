@@ -24,11 +24,11 @@ class All extends Component {
 
                     <View style={{ justifyContent: "flex-start", flexDirection: "row" }}>
                         <View style={{ justifyContent: "center", padding: 10 }}>
-                            <Image source={require('../../../../assets/Android/4x/Call_selectedxxxhdpi.png')} style={{ width: width / 30, height: width / 30 }} />
+                            <Image source={require('../../../../assets/Android/4x/incomming-call.png')} style={{ width: width / 30, height: width / 30 }} />
                         </View>
 
                         <View style={{ justifyContent: 'center' }}>
-                            <Text style={{ fontSize: 15, fontWeight: 'bold' }}>Sheron 3</Text>
+                            <Text style={{ fontSize: 15, fontWeight: 'bold', color : '#4d4d4d' }}>Sheron 3</Text>
                             <Text style={{ fontSize: 10, color: 'gray' }}>mobile</Text>
                         </View>
                     </View>
@@ -52,11 +52,11 @@ class All extends Component {
 
                     <View style={{ justifyContent: "flex-start", flexDirection: "row" }}>
                         <View style={{ justifyContent: "center", padding: 10 }}>
-                            <Image source={require('../../../../assets/Android/4x/Call_selectedxxxhdpi.png')} style={{ width: width / 30, height: width / 30 }} />
+                            <Image source={require('../../../../assets/Android/4x/outgoing-call.png')} style={{ width: width / 30, height: width / 30 }} />
                         </View>
 
                         <View style={{ justifyContent: 'center' }}>
-                            <Text style={{ fontSize: 15, fontWeight: 'bold' }}>Sheron 3</Text>
+                            <Text style={{ fontSize: 15, fontWeight: 'bold', color : '#4d4d4d' }}>Sheron 3</Text>
                             <Text style={{ fontSize: 10, color: 'gray' }}>mobile</Text>
                         </View>
                     </View>
@@ -81,11 +81,11 @@ class All extends Component {
 
                     <View style={{ justifyContent: "flex-start", flexDirection: "row" }}>
                         <View style={{ justifyContent: "center", padding: 10 }}>
-                            <Image source={require('../../../../assets/Android/4x/Call_selectedxxxhdpi.png')} style={{ width: width / 30, height: width / 30 }} />
+                            <Image source={require('../../../../assets/Android/4x/incomming-call.png')} style={{ width: width / 30, height: width / 30 }} />
                         </View>
 
                         <View style={{ justifyContent: 'center' }}>
-                            <Text style={{ fontSize: 15, fontWeight: 'bold' }}>Sheron 3</Text>
+                            <Text style={{ fontSize: 15, fontWeight: 'bold', color : '#4d4d4d' }}>Sheron 3</Text>
                             <Text style={{ fontSize: 10, color: 'gray' }}>mobile</Text>
                         </View>
                     </View>
@@ -109,11 +109,11 @@ class All extends Component {
 
                     <View style={{ justifyContent: "flex-start", flexDirection: "row" }}>
                         <View style={{ justifyContent: "center", padding: 10 }}>
-                            <Image source={require('../../../../assets/Android/4x/Call_selectedxxxhdpi.png')} style={{ width: width / 30, height: width / 30 }} />
+                            <Image source={require('../../../../assets/Android/4x/incomming-call.png')} style={{ width: width / 30, height: width / 30 }} />
                         </View>
 
                         <View style={{ justifyContent: 'center' }}>
-                            <Text style={{ fontSize: 15, fontWeight: 'bold' }}>Sheron 3</Text>
+                            <Text style={{ fontSize: 15, fontWeight: 'bold', color : '#4d4d4d' }}>Sheron 3</Text>
                             <Text style={{ fontSize: 10, color: 'gray' }}>mobile</Text>
                         </View>
                     </View>
@@ -137,11 +137,11 @@ class All extends Component {
 
                     <View style={{ justifyContent: "flex-start", flexDirection: "row" }}>
                         <View style={{ justifyContent: "center", padding: 10 }}>
-                            <Image source={require('../../../../assets/Android/4x/Call_selectedxxxhdpi.png')} style={{ width: width / 30, height: width / 30 }} />
+                            <Image source={require('../../../../assets/Android/4x/outgoing-call.png')} style={{ width: width / 30, height: width / 30 }} />
                         </View>
 
                         <View style={{ justifyContent: 'center' }}>
-                            <Text style={{ fontSize: 15, fontWeight: 'bold' }}>Sheron 3</Text>
+                            <Text style={{ fontSize: 15, fontWeight: 'bold', color : '#4d4d4d' }}>Sheron 3</Text>
                             <Text style={{ fontSize: 10, color: 'gray' }}>mobile</Text>
                         </View>
                     </View>
@@ -165,11 +165,11 @@ class All extends Component {
 
                     <View style={{ justifyContent: "flex-start", flexDirection: "row" }}>
                         <View style={{ justifyContent: "center", padding: 10 }}>
-                            <Image source={require('../../../../assets/Android/4x/Call_selectedxxxhdpi.png')} style={{ width: width / 30, height: width / 30 }} />
+                            <Image source={require('../../../../assets/Android/4x/outgoing-call.png')} style={{ width: width / 30, height: width / 30 }} />
                         </View>
 
                         <View style={{ justifyContent: 'center' }}>
-                            <Text style={{ fontSize: 15, fontWeight: 'bold' }}>Sheron 3</Text>
+                            <Text style={{ fontSize: 15, fontWeight: 'bold', color : '#4d4d4d' }}>Sheron 3</Text>
                             <Text style={{ fontSize: 10, color: 'gray' }}>mobile</Text>
                         </View>
                     </View>
@@ -192,11 +192,11 @@ class All extends Component {
 
                     <View style={{ justifyContent: "flex-start", flexDirection: "row" }}>
                         <View style={{ justifyContent: "center", padding: 10 }}>
-                            <Image source={require('../../../../assets/Android/4x/Call_selectedxxxhdpi.png')} style={{ width: width / 30, height: width / 30 }} />
+                            <Image source={require('../../../../assets/Android/4x/incomming-call.png')} style={{ width: width / 30, height: width / 30 }} />
                         </View>
 
                         <View style={{ justifyContent: 'center' }}>
-                            <Text style={{ fontSize: 15, fontWeight: 'bold' }}>Madhura Cheers Cinnamon Gra...</Text>
+                            <Text style={{ fontSize: 15, fontWeight: 'bold', color : '#4d4d4d' }}>Madhura Cheers Cinnamon Gra...</Text>
                             <Text style={{ fontSize: 10, color: 'gray' }}>Whatsapp Audio</Text>
                         </View>
                     </View>

@@ -12,8 +12,7 @@ const { width } = Dimensions.get('window');
 
 const FavaouritesStack = createStackNavigator({
     Favaourites: Favourites
-},
-    {
+}, {
         headerMode: "none",
         header: null,
     });

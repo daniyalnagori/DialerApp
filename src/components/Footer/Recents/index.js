@@ -45,9 +45,17 @@ class Recents extends Component {
       <View style={styles.container}>
 
         <Header style={{ backgroundColor: '#713F92' }}>
-          <Body style={{ alignItems: 'center' }}>
-            <Title>Recents</Title>
-          </Body>
+          <View style={{ flexDirection: 'row', alignItems: 'center', width, justifyContent: "space-around" }}>
+            <View style={{ width: "10%" }} />
+            <View style={{ alignSelf: 'center', width: "80%", justifyContent: "center" }}>
+              <Title>Recents</Title>
+            </View>
+
+            <View style={{ alignItems: 'center', justifyContent: "center", width: "10%" }}>
+              <Icon style={{ color: '#ffffff' }} name="ios-create-outline" />
+            </View>
+
+          </View>
         </Header>
 
         <View style={{ height: "8%", justifyContent: 'center', borderBottomColor: '#e6e6e6', borderBottomWidth: 0.5 }}>

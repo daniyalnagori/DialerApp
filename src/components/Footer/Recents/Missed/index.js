@@ -4,6 +4,7 @@ import {
     Text,
     View,
     Dimensions,
+    Image
 } from 'react-native';
 import { createStackNavigator } from "react-navigation";
 const { width } = Dimensions.get('window');
@@ -17,7 +18,143 @@ class Missed extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>Hello</Text>
+
+                <View style={{ justifyContent: 'space-between', alignSelf: 'center', flexDirection: "row", width: width, height: "10%", borderBottomColor: '#e6e6e6', borderBottomWidth: 0.5 }}>
+
+                    <View style={{ justifyContent: "flex-start", flexDirection: "row" }}>
+                        <View style={{ justifyContent: "center", padding: 10 }}>
+                            <Image source={require('../../../../assets/Android/4x/incomming-call.png')} style={{ width: width / 30, height: width / 30 }} />
+                        </View>
+
+                        <View style={{ justifyContent: 'center' }}>
+                            <Text style={{ fontSize: 15, fontWeight: 'bold', color : '#4d4d4d' }}>Sheron 3</Text>
+                            <Text style={{ fontSize: 10, color: 'gray' }}>mobile</Text>
+                        </View>
+                    </View>
+
+                    <View style={{ justifyContent: "flex-end", flexDirection: "row" }}>
+                        <View style={{ justifyContent: 'center' }}>
+                            <Text style={{ fontSize: 13, color: 'gray', fontWeight: 'bold' }}>12:57 PM</Text>
+                        </View>
+
+                        <View style={{ justifyContent: "center", padding: 10 }}>
+                            <Image source={require('../../../../assets/Android/4x/Infoxxxhdpi.png')} style={{ width: width / 27, height: width / 27 }} />
+                        </View>
+                    </View>
+
+                </View>
+
+
+
+
+                <View style={{ justifyContent: 'space-between', alignSelf: 'center', flexDirection: "row", width: width, height: "10%", borderBottomColor: '#e6e6e6', borderBottomWidth: 0.5 }}>
+
+                    <View style={{ justifyContent: "flex-start", flexDirection: "row" }}>
+                        <View style={{ justifyContent: "center", padding: 10 }}>
+                            <Image source={require('../../../../assets/Android/4x/incomming-call.png')} style={{ width: width / 30, height: width / 30 }} />
+                        </View>
+
+                        <View style={{ justifyContent: 'center' }}>
+                            <Text style={{ fontSize: 15, fontWeight: 'bold', color : '#4d4d4d' }}>Sheron 3</Text>
+                            <Text style={{ fontSize: 10, color: 'gray' }}>mobile</Text>
+                        </View>
+                    </View>
+
+                    <View style={{ justifyContent: "flex-end", flexDirection: "row" }}>
+                        <View style={{ justifyContent: 'center' }}>
+                            <Text style={{ fontSize: 13, color: 'gray', fontWeight: 'bold' }}>12:57 PM</Text>
+                        </View>
+
+                        <View style={{ justifyContent: "center", padding: 10 }}>
+                            <Image source={require('../../../../assets/Android/4x/Infoxxxhdpi.png')} style={{ width: width / 27, height: width / 27 }} />
+                        </View>
+                    </View>
+
+                </View>
+
+
+
+
+                <View style={{ justifyContent: 'space-between', alignSelf: 'center', flexDirection: "row", width: width, height: "10%", borderBottomColor: '#e6e6e6', borderBottomWidth: 0.5 }}>
+
+                    <View style={{ justifyContent: "flex-start", flexDirection: "row" }}>
+                        <View style={{ justifyContent: "center", padding: 10 }}>
+                            <Image source={require('../../../../assets/Android/4x/outgoing-call.png')} style={{ width: width / 30, height: width / 30 }} />
+                        </View>
+
+                        <View style={{ justifyContent: 'center' }}>
+                            <Text style={{ fontSize: 15, fontWeight: 'bold', color : '#4d4d4d' }}>Sheron 3</Text>
+                            <Text style={{ fontSize: 10, color: 'gray' }}>mobile</Text>
+                        </View>
+                    </View>
+
+                    <View style={{ justifyContent: "flex-end", flexDirection: "row" }}>
+                        <View style={{ justifyContent: 'center' }}>
+                            <Text style={{ fontSize: 13, color: 'gray', fontWeight: 'bold' }}>12:57 PM</Text>
+                        </View>
+
+                        <View style={{ justifyContent: "center", padding: 10 }}>
+                            <Image source={require('../../../../assets/Android/4x/Infoxxxhdpi.png')} style={{ width: width / 27, height: width / 27 }} />
+                        </View>
+                    </View>
+
+                </View>
+
+
+
+
+                <View style={{ justifyContent: 'space-between', alignSelf: 'center', flexDirection: "row", width: width, height: "10%", borderBottomColor: '#e6e6e6', borderBottomWidth: 0.5 }}>
+
+                    <View style={{ justifyContent: "flex-start", flexDirection: "row" }}>
+                        <View style={{ justifyContent: "center", padding: 10 }}>
+                            <Image source={require('../../../../assets/Android/4x/outgoing-call.png')} style={{ width: width / 30, height: width / 30 }} />
+                        </View>
+
+                        <View style={{ justifyContent: 'center' }}>
+                            <Text style={{ fontSize: 15, fontWeight: 'bold', color : '#4d4d4d' }}>Sheron 3</Text>
+                            <Text style={{ fontSize: 10, color: 'gray' }}>mobile</Text>
+                        </View>
+                    </View>
+
+                    <View style={{ justifyContent: "flex-end", flexDirection: "row" }}>
+                        <View style={{ justifyContent: 'center' }}>
+                            <Text style={{ fontSize: 13, color: 'gray', fontWeight: 'bold' }}>12:57 PM</Text>
+                        </View>
+
+                        <View style={{ justifyContent: "center", padding: 10 }}>
+                            <Image source={require('../../../../assets/Android/4x/Infoxxxhdpi.png')} style={{ width: width / 27, height: width / 27 }} />
+                        </View>
+                    </View>
+
+                </View>
+
+
+
+                <View style={{ justifyContent: 'space-between', alignSelf: 'center', flexDirection: "row", width: width, height: "10%", borderBottomColor: '#e6e6e6', borderBottomWidth: 0.5 }}>
+
+                    <View style={{ justifyContent: "flex-start", flexDirection: "row" }}>
+                        <View style={{ justifyContent: "center", padding: 10 }}>
+                            <Image source={require('../../../../assets/Android/4x/incomming-call.png')} style={{ width: width / 30, height: width / 30 }} />
+                        </View>
+
+                        <View style={{ justifyContent: 'center' }}>
+                            <Text style={{ fontSize: 15, fontWeight: 'bold', color : '#4d4d4d' }}>Madhura Cheers Cinnamon Gra...</Text>
+                            <Text style={{ fontSize: 10, color: 'gray' }}>Whatsapp Audio</Text>
+                        </View>
+                    </View>
+
+                    <View style={{ justifyContent: "flex-end", flexDirection: "row" }}>
+                        <View style={{ justifyContent: 'center' }}>
+                            <Text style={{ fontSize: 13, color: 'gray', fontWeight: 'bold' }}>12:57 PM</Text>
+                        </View>
+
+                        <View style={{ justifyContent: "center", padding: 10 }}>
+                            <Image source={require('../../../../assets/Android/4x/Infoxxxhdpi.png')} style={{ width: width / 27, height: width / 27 }} />
+                        </View>
+                    </View>
+
+                </View>
+
             </View >
         );
     }

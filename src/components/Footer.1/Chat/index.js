@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   Dimensions,
 } from 'react-native';
-import { Container, Header, Icon, Content, List, ListItem, Left, Body, Right, Thumbnail, Text } from 'native-base';
+import { Container, Header, Icon, Title, Content, List, ListItem, Left, Body, Right, Thumbnail, Text } from 'native-base';
 
 const { width } = Dimensions.get('window');
 
@@ -15,23 +15,29 @@ class Chat extends Component {
   constructor(props) {
     super(props);
   }
-  // static navigationOptions = {
-  //   title: "Chat",
-  //   headerStyle: {
-  //     backgroundColor: '#713F92',
-  //   },
-  //   headerTitleStyle: {
-  //     textAlign: 'center',
-  //     color: 'white',
-  //     justifyContent: 'center',
-  //     alignSelf: 'center',
-  //     justifyContent: 'space-between',
-  //   },
-  // };
 
   render() {
     return (
       <View style={styles.container}>
+
+        <Header style={{ backgroundColor: '#713F92', flexDirection: 'row', justifyContent: 'space-between' }}>
+
+          <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+            <TouchableOpacity activeOpacity={0.5} onPress={() => this.props.navigation.navigate('Footer')}>
+              <View style={{ justifyContent: 'center', alignItems: 'center', justifyContent: 'center', flexDirection: 'row' }}>
+                <Icon style={{ color: '#ffffff' }} name='ios-arrow-back' />
+                <Text style={{ color: '#ffffff', paddingLeft: '2%', fontSize: 15 }}>Back</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+
+          <Title style={{ alignSelf: 'center' }}>Chats</Title>
+
+          <View style={{ alignItems: "center", borderColor: '#ffffff', alignSelf: 'center' }}>
+            <Icon style={{ color: '#ffffff', fontSize: 25 }} name="ios-create-outline" />
+          </View>
+
+        </Header>
 
         <Container>
           <ListItem itemDivider>

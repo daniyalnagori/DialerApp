@@ -62,8 +62,8 @@ class Contacts extends Component {
 
               <Title style={{ alignSelf: 'center' }}>Contacts</Title>
 
-              <View style={{ borderRadius: (width / 15) / 2, width: width / 15, height: width / 15, color: '#fffff', alignItems: "center", borderColor: '#ffffff', borderWidth: 1, alignSelf: 'center' }}>
-                <Icon style={{ color: '#ffffff' }} name="add" />
+              <View style={{ borderRadius: (width / 20) / 2, width: width / 20, height: width / 20, color: '#fffff', alignItems: "center", borderColor: '#ffffff', borderWidth: 1, alignSelf: 'center' }}>
+                <Icon style={{ color: '#ffffff', fontSize: 18 }} name="add" />
               </View>
 
             </Header>

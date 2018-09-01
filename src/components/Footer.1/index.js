@@ -12,23 +12,38 @@ const { width } = Dimensions.get('window');
 
 const CallsStack = createStackNavigator({
     Calls: Calls,
-});
+}, {
+        headerMode: "none",
+        header: null,
+    });
 
 const CameraStack = createStackNavigator({
     Camera: Camera,
-});
+}, {
+        headerMode: "none",
+        header: null,
+    });
 
 const ChatStack = createStackNavigator({
     Chat: Chat,
-});
+}, {
+        headerMode: "none",
+        header: null,
+    });
 
 const SettingStack = createStackNavigator({
     Setting: Setting,
-});
+}, {
+        headerMode: "none",
+        header: null,
+    });
 
 const StatusStack = createStackNavigator({
     Status: Status,
-});
+}, {
+        headerMode: "none",
+        header: null,
+    });
 
 
 export default createBottomTabNavigator(
@@ -54,7 +69,7 @@ export default createBottomTabNavigator(
                     size = width / 18
                     sizew = width / 18
                 } else if (routeName === 'Calls') {
-                    iconName = focused ? require('../../assets/Android/4x/Call_selectedxxxhdpi.png') : require('../../assets/Android/4x/Call_selectedxxxhdpi.png');
+                    iconName = focused ? require('../../assets/Android/4x/Call_selectedxxxhdpi.png') : require('../../assets/Android/4x/Call_selectedxxxgrayhdpi.png');
                     size = width / 18
                     sizew = width / 18
                 } else if (routeName === 'Camera') {
