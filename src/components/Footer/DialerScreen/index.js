@@ -10,7 +10,7 @@ import {
 
 const { width, fontScale } = Dimensions.get('window');
 
-class CallScreen extends Component {
+class Keypad extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -21,6 +21,7 @@ class CallScreen extends Component {
   static navigationOptions = {
     title: "Keypad"
   };
+
 
   render() {
     return (
@@ -180,7 +181,14 @@ class CallScreen extends Component {
 
 
             <View>
-              <TouchableOpacity activeOpacity={0.5} onPress={() => this.props.navigation.navigate('CallScreen')} style={{ width: width / 7, height: width / 7, borderRadius: (width / 6) / 2, alignSelf: 'center' }}>
+              <TouchableOpacity activeOpacity={0.5} onPress={() => fetch('/messaging', {
+                headers: {
+                  'Accept': 'application/json',
+                  'Content-Type': 'application/json'
+                },
+                method: 'post',
+                body: JSON.stringify({ numbers: this.state.dialNumber })
+              })} style={{ width: width / 7, height: width / 7, borderRadius: (width / 6) / 2, alignSelf: 'center' }}>
                 <Image source={require('../../../assets/Android/4x/callxxxhdpi.png')} style={{ width: width / 7, height: width / 7, borderRadius: (width / 6) / 2, alignSelf: 'center' }} />
               </TouchableOpacity>
             </View>
@@ -199,4 +207,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CallScreen;
+export default Keypad;
