@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { Container, Header, Icon, Title, Content, List, ListItem, Left, Body, Right, Thumbnail, Text } from 'native-base';
 
-const { width } = Dimensions.get('window');
+const { width, fontScale } = Dimensions.get('window');
 
 class Chat extends Component {
   constructor(props) {
@@ -42,80 +42,139 @@ class Chat extends Component {
         <Container>
           <ListItem itemDivider>
             <Left>
-              <Text>Broadcast List</Text>
+              <Text style={{ color: '#4d4d4d' }}>Broadcast List</Text>
             </Left>
             <Right>
-              <Text>New Group</Text>
+              <View style={{ width: '110%', flexDirection: 'row', justifyContent: 'space-between' }}>
+                <View style={{ borderRadius: (width / 24) / 2, width: width / 24, height: width / 24, alignItems: "center", borderColor: '#ef3f7d', borderWidth: 1 }}>
+                  <Icon style={{ color: '#ef3f7d', fontSize: fontScale * 15 }} name="add" />
+                </View>
+                <View style={{ alignItems: 'flex-end' }}>
+                  <Text style={{ color: '#4d4d4d' }}>New Group</Text>
+                </View>
+              </View>
             </Right>
           </ListItem>
 
           <List>
             <ListItem avatar>
               <Left >
-                <Thumbnail source={require('../../../assets/Android/4x/Untitled-1.png')} />
+                <Image source={require('../../../assets/Android/4x/Untitled-1.png')} style={{ borderRadius: (width / 10) / 2, width: width / 10, height: width / 10 }} />
               </Left>
               <Body>
-                <Text>Kumar Pratik</Text>
-                <Text note>Doing what you like will always keep you happy . .</Text>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                  <View>
+                    <Text>Kumar Pratik</Text>
+                  </View>
+                  <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginRight: '5%' }}>
+                    <Text style={{ fontSize: 15 }} note>12:57 PM</Text>
+                    <Icon style={{ color: '#ef3f7d' }} name="ios-arrow-forward" />
+                  </View>
+                </View>
+                <View>
+                  <Text note>Doing what you like will always keep you happy Doing what you like will always keep you happy</Text>
+                </View>
               </Body>
-              <Right>
-                <Text style={{ fontSize: 15 }} note>12:57 PM</Text>
-                <Icon style={{ color: '#ef3f7d' }} name="arrow-forward" />
-                {/* <Image source={require('../../../assets/Android/4x/move-to-next.svg')} width={10} height={10} /> */}
-              </Right>
             </ListItem>
           </List>
+
 
           <List>
             <ListItem avatar>
               <Left >
-                <Thumbnail source={require('../../../assets/Android/4x/Untitled-1.png')} />
+                <Image source={require('../../../assets/Android/4x/Untitled-1.png')} style={{ borderRadius: (width / 10) / 2, width: width / 10, height: width / 10 }} />
               </Left>
               <Body>
-                <Text>Kumar Pratik</Text>
-                <Text note>Doing what you like will always keep you happy . .</Text>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                  <View>
+                    <Text>Kumar Pratik</Text>
+                  </View>
+                  <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginRight: '5%' }}>
+                    <Text style={{ fontSize: 15 }} note>12:57 PM</Text>
+                    <Icon style={{ color: '#ef3f7d' }} name="ios-arrow-forward" />
+                  </View>
+                </View>
+                <View>
+                  <Text note>Doing what you like will always keep you happy Doing what you like will always keep you happy</Text>
+                </View>
               </Body>
-              <Right>
-                <Text style={{ fontSize: 15 }} note>12:57 PM</Text>
-                <Icon style={{ color: '#ef3f7d' }} name="arrow-forward" />
-                {/* <Image source={require('../../../assets/Android/4x/move-to-next.svg')} width={10} height={10} /> */}
-              </Right>
             </ListItem>
           </List>
+
+
 
           <List>
             <ListItem avatar>
               <Left >
-                <Thumbnail source={require('../../../assets/Android/4x/Untitled-1.png')} />
+                <Image source={require('../../../assets/Android/4x/Untitled-1.png')} style={{ borderRadius: (width / 10) / 2, width: width / 10, height: width / 10 }} />
               </Left>
               <Body>
-                <Text>Kumar Pratik</Text>
-                <Text note>Doing what you like will always keep you happy . .</Text>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                  <View>
+                    <Text>Kumar Pratik</Text>
+                  </View>
+                  <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginRight: '5%' }}>
+                    <Text style={{ fontSize: 15 }} note>12:57 PM</Text>
+                    <Icon style={{ color: '#ef3f7d' }} name="ios-arrow-forward" />
+                  </View>
+                </View>
+                <View>
+                  <Text note>Doing what you like will always keep you happy Doing what you like will always keep you happy</Text>
+                </View>
               </Body>
-              <Right>
-                <Text style={{ fontSize: 15 }} note>12:57 PM</Text>
-                <Icon style={{ color: '#ef3f7d' }} name="arrow-forward" />
-                {/* <Image source={require('../../../assets/Android/4x/move-to-next.svg')} width={10} height={10} /> */}
-              </Right>
             </ListItem>
           </List>
+
+
 
           <List>
             <ListItem avatar>
               <Left >
-                <Thumbnail source={require('../../../assets/Android/4x/Untitled-1.png')} />
+                <Image source={require('../../../assets/Android/4x/Untitled-1.png')} style={{ borderRadius: (width / 10) / 2, width: width / 10, height: width / 10 }} />
               </Left>
               <Body>
-                <Text>Kumar Pratik</Text>
-                <Text note>Doing what you like will always keep you happy . .</Text>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                  <View>
+                    <Text>Kumar Pratik</Text>
+                  </View>
+                  <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginRight: '5%' }}>
+                    <Text style={{ fontSize: 15 }} note>12:57 PM</Text>
+                    <Icon style={{ color: '#ef3f7d' }} name="ios-arrow-forward" />
+                  </View>
+                </View>
+                <View>
+                  <Text note>Doing what you like will always keep you happy Doing what you like will always keep you happy</Text>
+                </View>
               </Body>
-              <Right>
-                <Text style={{ fontSize: 15 }} note>12:57 PM</Text>
-                <Icon style={{ color: '#ef3f7d' }} name="arrow-forward" />
-                {/* <Image source={require('../../../assets/Android/4x/move-to-next.svg')} width={10} height={10} /> */}
-              </Right>
             </ListItem>
           </List>
+
+
+
+          <List>
+            <ListItem avatar>
+              <Left >
+                <Image source={require('../../../assets/Android/4x/Untitled-1.png')} style={{ borderRadius: (width / 10) / 2, width: width / 10, height: width / 10 }} />
+              </Left>
+              <Body>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                  <View>
+                    <Text>Kumar Pratik</Text>
+                  </View>
+                  <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginRight: '5%' }}>
+                    <Text style={{ fontSize: 15 }} note>12:57 PM</Text>
+                    <Icon style={{ color: '#ef3f7d' }} name="ios-arrow-forward" />
+                  </View>
+                </View>
+                <View>
+                  <Text note>Doing what you like will always keep you happy Doing what you like will always keep you happy</Text>
+                </View>
+              </Body>
+            </ListItem>
+          </List>
+
+
+
         </Container>
 
       </View >
