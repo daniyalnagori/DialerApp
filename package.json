@@ -1,24 +1,21 @@
 {
-  "name": "facetone",
+  "name": "Facetone",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "nodemon node node_modules/react-native/local-cli/cli.js start",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
   },
   "dependencies": {
     "aws-amplify-react-native": "^1.0.6",
-    "express": "^4.16.3",
     "native-base": "^2.8.0",
-    "nodemon": "^1.18.4",
     "react": "16.4.1",
     "react-native": "0.55.4",
     "react-navigation": "2.8.0",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
     "redux-observable": "0.19.0",
-    "rxjs": "5.5.1",
-    "twilio": "^3.19.2"
+    "rxjs": "5.5.1"
   },
   "devDependencies": {
     "babel-jest": "23.4.2",
@@ -28,17 +25,5 @@
   },
   "jest": {
     "preset": "react-native"
-  },
-  "description": "Facetone Dialer App",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/daniyalnagori/DialerApp.git"
-  },
-  "author": "Daniyal Nagori",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/daniyalnagori/DialerApp/issues"
-  },
-  "homepage": "https://github.com/daniyalnagori/DialerApp#readme"
+  }
 }

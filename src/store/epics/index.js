@@ -1,9 +1,10 @@
 import { combineEpics } from 'redux-observable';
 
 import AuthEpic from './authEpic'
+import ApiEpic from './ApiEpic'
 
 const rootEpic = combineEpics(
-    // AuthEpic.signupEpic,
+    ApiEpic.CallEpic,
     AuthEpic.signinEpic
 );
 

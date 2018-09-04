@@ -18,7 +18,7 @@ export class HttpService {
         return Observable.ajax({
             url,
             method: 'POST',
-            body,
+            body: JSON.stringify(body),
             headers,
             async: true,
             crossDomain: true,

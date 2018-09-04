@@ -7,5 +7,5 @@ export default class path {
     //authentication URL
     // static SIGNUP = this.baseUrl + "api/user/signup";
     // static LOGIN = "https://jsonplaceholder.typicode.com/posts"; // temp for now
-    
+    static CAllAPI = 'http://192.168.100.5:3000/call'
 }

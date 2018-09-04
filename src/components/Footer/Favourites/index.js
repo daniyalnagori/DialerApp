@@ -16,27 +16,6 @@ class Favourites extends Component {
     super(props);
   }
 
-  // static navigationOptions = {
-  //   title: "Favourites",
-  //   headerStyle: {
-  //     backgroundColor: '#713F92',
-  //   },
-  //   headerTitleStyle: {
-  //     textAlign: 'center',
-  //     color: 'white',
-  //     justifyContent: 'center',
-  //     alignSelf: 'center',
-  //     justifyContent: 'space-between',
-  //   },
-  //   headerRight: (
-  //     <Button
-  //       title="+1"
-  //       color="white"
-  //     />
-  //   ),
-  // }
-
-
   render() {
     return (
       <View style={styles.container}>

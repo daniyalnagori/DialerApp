@@ -1,0 +1,16 @@
+{
+  "name": "facetone",
+  "version": "1.0.0",
+  "description": "Facetone Dialer App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniyal Nagori",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "twilio": "^3.19.2"
+  }
+}

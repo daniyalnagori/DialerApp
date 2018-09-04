@@ -7,20 +7,33 @@ import {
   TouchableOpacity,
   Dimensions,
 } from 'react-native';
+import ApiAction from './../../../store/actions/ApiAction'
+import { connect } from 'react-redux';
+
 
 const { width, fontScale } = Dimensions.get('window');
+
 
 class Keypad extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dialNumber: ''
+      dialNumber: '+923363083049'
     }
   }
 
   static navigationOptions = {
     title: "Keypad"
   };
+
+
+  callFunction() {
+    console.log('function')
+    let obj = {
+      CallNumber: this.state.dialNumber
+    }
+    this.props.callObj(obj)
+  }
 
 
   render() {
@@ -178,17 +191,17 @@ class Keypad extends Component {
 
             </View>
 
-
-
             <View>
-              <TouchableOpacity activeOpacity={0.5} onPress={() => fetch('/messaging', {
-                headers: {
-                  'Accept': 'application/json',
-                  'Content-Type': 'application/json'
-                },
-                method: 'post',
-                body: JSON.stringify({ numbers: this.state.dialNumber })
-              })} style={{ width: width / 7, height: width / 7, borderRadius: (width / 6) / 2, alignSelf: 'center' }}>
+              <TouchableOpacity activeOpacity={0.5} onPress={() => this.callFunction()
+                // fetch('http://192.168.100.5:3000/call', {
+                //   headers: {
+                //     'Content-Type': 'application/json'
+                //   },
+                //   method: 'post',
+                //   body: JSON.stringify({ CallNumber: this.state.dialNumber })
+                // }).then(s => console.log('sssss ', s)).catch(e => console.log('errrr => ', e))
+
+              } style={{ width: width / 7, height: width / 7, borderRadius: (width / 6) / 2, alignSelf: 'center' }}>
                 <Image source={require('../../../assets/Android/4x/callxxxhdpi.png')} style={{ width: width / 7, height: width / 7, borderRadius: (width / 6) / 2, alignSelf: 'center' }} />
               </TouchableOpacity>
             </View>
@@ -200,6 +213,35 @@ class Keypad extends Component {
   }
 }
 
+
+// fetch('http://192.168.100.5:3000/call', {
+//                 headers: {
+//                   'Content-Type': 'application/json'
+//                 },
+//                 method: 'post',
+//                 body: JSON.stringify({ numbers: this.state.dialNumber })
+//               }).then(s => console.log('sssss ', s)).catch(e => console.log('errrr => ', e))
+
+
+function mapStateToProp(state) {
+  console.log('success', state.ApiReducer.isCallSuccess)
+  return ({
+    isCallSuccess: state.ApiReducer.isCallSuccess,
+    isCallFailure: state.ApiReducer.isCallFailure,
+  })
+}
+
+function mapDispatchToProp(dispatch) {
+  return ({
+    callObj: (obj) => {
+      dispatch(ApiAction.callObj(obj))
+    },
+  })
+};
+
+
+
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -207,4 +249,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Keypad;
+export default connect(mapStateToProp, mapDispatchToProp)(Keypad);
