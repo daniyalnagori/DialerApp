@@ -1,8 +1,8 @@
 var app = require('express')();
 const bodyParser = require('body-parser');
 
-const accountSid = 'AC6ce6709a732d467433d6709ec16c854a';
-const authToken = '08e202ca9190e1d53d35707ccad70feb';
+const accountSid = '';
+const authToken = '';
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(bodyParser.json());
