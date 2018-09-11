@@ -13,26 +13,26 @@ export default class ApiEpic {
     //Epic middleware for login
     static CallEpic = (action$) => {
         return action$.ofType(CALLOBJ)
-            .switchMap(({ payload }) => {
-                console.log(payload, "asdasdasd")
-                return HttpService.post(Path.CAllAPI, payload)
-                    .switchMap(({ response }) => {
-                        console.log(response)
-                        if (response) {
-                            return Observable.of({
-                                type: CALLOBJ_SUCCESS,
-                                payload: response
-
-                            });
-                        }
+            .switchMap(() => {
+                console.log("asdasdasd") 
+                return HttpService.get(Path.CAllAPI)
+                    .map((response) => {
+                        console.log("asd123", response)
+                        return {
+                            type: CALLOBJ_SUCCESS,
+                            payload: response
+                        };
+                    }).catch((error) => {
+                        console.log("asd", error)
                         return Observable.of({
                             type: CALLOBJ_FAILURE,
-                            payload: response
+                            payload: error
                         });
-                    });
+                    })
             })
     }
 }
+
 
 
 

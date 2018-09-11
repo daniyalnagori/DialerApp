@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { Store } from './store/index';
 import NavigationApp from './config/AppRoutes';
 import config from './config/config';
+ 
 // import Amplify from 'aws-amplify';
 // Amplify.configure({
 //     Auth: {

@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   ImageBackground
 } from 'react-native';
+// import { connect } from 'react-redux';
 
 class CallingScreen extends Component {
   constructor(props) {
@@ -70,4 +71,20 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CallingScreen;
+
+// function mapStateToProp(state) {
+//   return ({
+//     TwilioToken: state..DataSetConfigurationID,
+//   })
+// }
+
+// function mapDispatchToProp(dispatch) {
+//   return ({
+//     dataSetComponent: (change) => {
+//       dispatch(functionalityActions.dataSetComponent(change))
+//     },
+//   })
+// };
+
+// export default connect(mapStateToProp, mapDispatchToProp)(CallingScreen);
+export default CallingScreen

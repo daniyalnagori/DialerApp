@@ -3,12 +3,14 @@ import 'rxjs/add/observable/dom/ajax';
 
 export class HttpService {
     //Get request HTTP service
-    static get(url, headers= {}){
+    static get(url, headers = { 'Content-Type': 'application/json' }) {
         return Observable.ajax({
             url,
             method: 'GET',
+            headers,
             async: true,
             crossDomain: true,
+            withCredentials: true,
             responseType: 'json',
             createXHR: () => new XMLHttpRequest()
         });

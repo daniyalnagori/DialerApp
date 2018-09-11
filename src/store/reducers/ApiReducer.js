@@ -18,7 +18,7 @@ export default function ApiReducer(state = initialState, action) {
             }
 
         case CALLOBJ_SUCCESS:
-            console.log(payload)
+            console.log(action.payload)
             return {
                 ...state,
                 isCallSuccess: true,
