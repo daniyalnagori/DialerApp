@@ -52,9 +52,9 @@ export default class Dropdown extends React.Component {
             <View style={[this.props.containerSyle, { position: 'relative', width: '100%' }]}>
                 <TouchableOpacity onPress={() => { window.onBodyPress && window.onBodyPress(); this.setState({ dropDown: !this.state.dropDown }) }}>
                     <View style={{ position: 'relative', elevation: 1, flexDirection: 'row', justifyContent: 'space-between', width: '95%' }}>
-                        <Text style={{ color: '#8DAAB9', fontSize: fontScale * 14 }}>{!this.state.dropDown ? this.state.placeholder : " "}</Text>
+                        <Text style={{ color: '#999999', fontSize: fontScale * 14 }}>{!this.state.dropDown ? this.state.placeholder : " "}</Text>
                         {/* <Image source={Icons.dropDown} style={{ height: 6, width: 12, resizeMode: 'contain' }} /> */}
-                        <NB.Icon name="md-arrow-dropdown" style={{ color: 'grey', fontSize: 20 }} />
+                        <NB.Icon name="md-arrow-dropdown" style={{ color: '#ef3f7d', fontSize: 20 }} />
                     </View>
                 </TouchableOpacity>
                 {this.state.dropDown && <View style={this.props.itemView}>

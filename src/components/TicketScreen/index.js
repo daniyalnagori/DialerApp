@@ -61,9 +61,9 @@ class TicketScreen extends Component {
                         </View>
                     </View>
 
-                    <View style={{ width: '95%', height: '85%', backgroundColor: '#ffffff', alignItems: 'center', alignSelf: 'center', borderRadius: width / 65 }}>
+                    <View style={{ width: '95%', height: '85%', backgroundColor: '#ffffff', alignItems: 'center', alignSelf: 'center', borderRadius: width / 70 }}>
 
-                        <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', width: '100%', height: '7%', borderColor: '#ffffff', borderRadius: width / 65, borderBottomColor: '#eef0f5', borderWidth: 1 }}>
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', width: '100%', height: '7%', borderColor: '#ffffff', borderTopLeftRadius: width / 70, borderTopRightRadius: width / 70, borderBottomColor: '#eef0f5', borderWidth: 1 }}>
                             <Image source={require('../../assets/Android/4x/windows.png')} style={{ width: width / 28, height: height / 45, marginLeft: '1.5%' }} />
                             <TouchableOpacity onPress={() => { this.setState({ profilebg: '#ef3f7d', profilecol: '#ffffff', ticketbg: '#ffffff', ticketcol: '#4d4d4d', notebg: '#ffffff', notecol: '#4d4d4d', inboxbg: '#ffffff', inboxcol: '#4d4d4d', userProfile: true, ticketDuo: false, myNote: false, ticketInbox: false }) }}>
                                 <View style={{ backgroundColor: this.state.profilebg, height: '100%', alignItems: 'center', justifyContent: 'center', paddingLeft: '1%', paddingRight: '1%' }}>
@@ -91,7 +91,7 @@ class TicketScreen extends Component {
                             <Image source={require('../../assets/Android/4x/windows.png')} style={{ width: width / 28, height: height / 45, marginRight: '1.5%' }} />
                         </View>
 
-                        <View style={{ width: '100%', height: '100%' }}>
+                        <View style={{ width: '100%', height: '100%', }}>
                             {this.state.userProfile ? <UserProfile /> : null}
                             {this.state.ticketDuo ? <TicketDuo /> : null}
                             {this.state.myNote ? <MyNote /> : null}
