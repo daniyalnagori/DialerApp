@@ -62,11 +62,11 @@ class SignIn extends Component {
                                         </View>
                                     </TouchableOpacity>
                                     <View>
-                                        <Text style={{ color: '#999999' }}>remember me</Text>
+                                        <Text style={{ color: '#999999', fontSize: fontScale * 12 }}> remember me</Text>
                                     </View>
                                 </View>
                                 <View>
-                                    <Text style={{ color: '#999999' }}>Forgot Password?</Text>
+                                    <Text style={{ color: '#999999', fontSize: fontScale * 12 }}>Forgot Password?</Text>
                                 </View>
                             </View>
 
@@ -77,7 +77,7 @@ class SignIn extends Component {
                             </View>
 
                             <View style={{ height: '8%', borderColor: '#ffffff', borderTopColor: '#e6e6e6', width: '80%', borderWidth: 1, alignSelf: 'center', alignItems: 'center', justifyContent: 'center' }}>
-                                <Text style={{ color: '#999999' }}>or sign in with one of these services</Text>
+                                <Text style={{ color: '#999999', fontSize: fontScale * 12 }}>or sign in with one of these services</Text>
                             </View>
 
                             <View style={{ width: '80%', alignSelf: 'center', height: '8%' }}>
@@ -113,7 +113,7 @@ class SignIn extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        // backgroundColor: 'purple'
+        height: height
     },
 });
 

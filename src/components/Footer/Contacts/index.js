@@ -27,27 +27,6 @@ class Contacts extends Component {
   }
 
 
-  // static navigationOptions = {
-  //   title: "Contacts",
-  //   headerStyle: {
-  //     backgroundColor: '#713F92',
-  //   },
-  //   headerTitleStyle: {
-  //     textAlign: 'center',
-  //     color: 'white',
-  //     justifyContent: 'center',
-  //     alignSelf: 'center',
-  //   },
-  //   headerRight: (
-  //     <Button
-  //       title="+1"
-  //       color="white"
-  //     />
-  //   ),
-  // }
-
-
-
   render() {
     return (
       <View style={styles.container}>
@@ -62,7 +41,7 @@ class Contacts extends Component {
 
               <Title style={{ alignSelf: 'center' }}>Contacts</Title>
 
-              <View style={{ borderRadius: (width / 20) / 2, width: width / 20, height: width / 20, color: '#fffff', alignItems: "center", borderColor: '#ffffff', borderWidth: 1, alignSelf: 'center' }}>
+              <View style={{ borderRadius: (width / 20) / 2, width: width / 20, height: width / 20, color: '#fffff', alignItems: "center", borderColor: '#ffffff', borderWidth: 1, alignSelf: 'center', justifyContent: 'center' }}>
                 <Icon style={{ color: '#ffffff', fontSize: 18 }} name="add" />
               </View>
 

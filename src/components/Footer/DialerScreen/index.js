@@ -60,13 +60,13 @@ class Keypad extends Component {
               <View style={{ flexDirection: "row", justifyContent: "space-around", width: '70%', alignSelf: 'center' }} >
 
                 <TouchableOpacity activeOpacity={0.5} onPress={() => { let dialNumber = this.state.dialNumber + JSON.parse('1'); this.setState({ dialNumber: dialNumber }) }}>
-                  <View style={{ width: width / 7, height: width / 7, borderRadius: (width / 7) / 2, backgroundColor: '#f1f1f1', justifyContent: 'center', alignItems: 'center' }}>
+                  <View style={{ width: width / 6, height: width / 6, borderRadius: (width / 6) / 2, backgroundColor: '#f1f1f1', justifyContent: 'center', alignItems: 'center' }}>
                     <Text style={{ fontSize: fontScale * 30, color: 'black' }}>1</Text>
                   </View>
                 </TouchableOpacity>
 
                 <TouchableOpacity activeOpacity={0.5} onPress={() => { let dialNumber = this.state.dialNumber + JSON.parse('2'); this.setState({ dialNumber: dialNumber }) }}>
-                  <View style={{ width: width / 7, height: width / 7, borderRadius: (width / 7) / 2, backgroundColor: '#f1f1f1', justifyContent: 'center', alignItems: 'center' }}>
+                  <View style={{ width: width / 6, height: width / 6, borderRadius: (width / 6) / 2, backgroundColor: '#f1f1f1', justifyContent: 'center', alignItems: 'center' }}>
                     <Text style={{ fontSize: fontScale * 30, color: 'black' }}>2</Text>
                     <View style={{ flexDirection: 'row', color: '#00000', }}>
                       <Text style={{ fontSize: fontScale * 10, color: 'black' }}>A</Text>
@@ -77,7 +77,7 @@ class Keypad extends Component {
                 </TouchableOpacity>
 
                 <TouchableOpacity activeOpacity={0.5} onPress={() => { let dialNumber = this.state.dialNumber + JSON.parse('3'); this.setState({ dialNumber: dialNumber }) }}>
-                  <View style={{ width: width / 7, height: width / 7, color: '#00000', borderRadius: (width / 7) / 2, backgroundColor: '#f1f1f1', justifyContent: 'center', alignItems: 'center' }}>
+                  <View style={{ width: width / 6, height: width / 6, color: '#00000', borderRadius: (width / 6) / 2, backgroundColor: '#f1f1f1', justifyContent: 'center', alignItems: 'center' }}>
                     <Text style={{ fontSize: fontScale * 30, color: 'black' }}>3</Text>
                     <View style={{ flexDirection: 'row' }}>
                       <Text style={{ fontSize: fontScale * 10, color: 'black' }}>D</Text>
@@ -94,7 +94,7 @@ class Keypad extends Component {
               <View style={{ flexDirection: "row", justifyContent: "space-around", width: '70%', alignSelf: 'center' }} >
 
                 <TouchableOpacity activeOpacity={0.5} onPress={() => { let dialNumber = this.state.dialNumber + JSON.parse('4'); this.setState({ dialNumber: dialNumber }) }}>
-                  <View style={{ width: width / 7, height: width / 7, borderRadius: (width / 7) / 2, backgroundColor: '#f1f1f1', justifyContent: 'center', alignItems: 'center' }}>
+                  <View style={{ width: width / 6, height: width / 6, borderRadius: (width / 6) / 2, backgroundColor: '#f1f1f1', justifyContent: 'center', alignItems: 'center' }}>
                     <Text style={{ fontSize: fontScale * 30, color: 'black' }}>4</Text>
                     <View style={{ flexDirection: 'row' }}>
                       <Text style={{ fontSize: fontScale * 10, color: 'black' }}>G</Text>
@@ -105,7 +105,7 @@ class Keypad extends Component {
                 </TouchableOpacity>
 
                 <TouchableOpacity activeOpacity={0.5} onPress={() => { let dialNumber = this.state.dialNumber + JSON.parse('5'); this.setState({ dialNumber: dialNumber }) }}>
-                  <View style={{ width: width / 7, height: width / 7, borderRadius: (width / 7) / 2, backgroundColor: '#f1f1f1', justifyContent: 'center', alignItems: 'center' }}>
+                  <View style={{ width: width / 6, height: width / 6, borderRadius: (width / 6) / 2, backgroundColor: '#f1f1f1', justifyContent: 'center', alignItems: 'center' }}>
                     <Text style={{ fontSize: fontScale * 30, color: 'black' }}>5</Text>
                     <View style={{ flexDirection: 'row' }}>
                       <Text style={{ fontSize: fontScale * 10, color: 'black' }}>J</Text>
@@ -116,7 +116,7 @@ class Keypad extends Component {
                 </TouchableOpacity>
 
                 <TouchableOpacity activeOpacity={0.5} onPress={() => { let dialNumber = this.state.dialNumber + JSON.parse('6'); this.setState({ dialNumber: dialNumber }) }}>
-                  <View style={{ width: width / 7, height: width / 7, borderRadius: (width / 7) / 2, backgroundColor: '#f1f1f1', justifyContent: 'center', alignItems: 'center' }}>
+                  <View style={{ width: width / 6, height: width / 6, borderRadius: (width / 6) / 2, backgroundColor: '#f1f1f1', justifyContent: 'center', alignItems: 'center' }}>
                     <Text style={{ fontSize: fontScale * 30, color: 'black' }}>6</Text>
                     <View style={{ flexDirection: 'row' }}>
                       <Text style={{ fontSize: fontScale * 10, color: 'black' }}>M</Text>
@@ -133,7 +133,7 @@ class Keypad extends Component {
               <View style={{ flexDirection: "row", justifyContent: "space-around", width: '70%', alignSelf: 'center' }} >
 
                 <TouchableOpacity activeOpacity={0.5} onPress={() => { let dialNumber = this.state.dialNumber + JSON.parse('7'); this.setState({ dialNumber: dialNumber }) }}>
-                  <View style={{ width: width / 7, height: width / 7, borderRadius: (width / 7) / 2, backgroundColor: '#f1f1f1', justifyContent: 'center', alignItems: 'center' }}>
+                  <View style={{ width: width / 6, height: width / 6, borderRadius: (width / 6) / 2, backgroundColor: '#f1f1f1', justifyContent: 'center', alignItems: 'center' }}>
                     <Text style={{ fontSize: fontScale * 30, color: 'black' }}>7</Text>
                     <View style={{ flexDirection: 'row' }}>
                       <Text style={{ fontSize: fontScale * 10, color: 'black' }}>P</Text>
@@ -145,7 +145,7 @@ class Keypad extends Component {
                 </TouchableOpacity>
 
                 <TouchableOpacity activeOpacity={0.5} onPress={() => { let dialNumber = this.state.dialNumber + JSON.parse('8'); this.setState({ dialNumber: dialNumber }) }}>
-                  <View style={{ width: width / 7, height: width / 7, borderRadius: (width / 7) / 2, backgroundColor: '#f1f1f1', justifyContent: 'center', alignItems: 'center' }}>
+                  <View style={{ width: width / 6, height: width / 6, borderRadius: (width / 6) / 2, backgroundColor: '#f1f1f1', justifyContent: 'center', alignItems: 'center' }}>
                     <Text style={{ fontSize: fontScale * 30, color: 'black' }}>8</Text>
                     <View style={{ flexDirection: 'row' }}>
                       <Text style={{ fontSize: fontScale * 10, color: 'black' }}>T</Text>
@@ -156,7 +156,7 @@ class Keypad extends Component {
                 </TouchableOpacity>
 
                 <TouchableOpacity activeOpacity={0.5} onPress={() => { let dialNumber = this.state.dialNumber + JSON.parse('9'); this.setState({ dialNumber: dialNumber }) }}>
-                  <View style={{ width: width / 7, height: width / 7, borderRadius: (width / 7) / 2, backgroundColor: '#f1f1f1', justifyContent: 'center', alignItems: 'center' }}>
+                  <View style={{ width: width / 6, height: width / 6, borderRadius: (width / 6) / 2, backgroundColor: '#f1f1f1', justifyContent: 'center', alignItems: 'center' }}>
                     <Text style={{ fontSize: fontScale * 30, color: 'black' }}>9</Text>
                     <View style={{ flexDirection: 'row' }}>
                       <Text style={{ fontSize: fontScale * 10, color: 'black' }}>W</Text>
@@ -174,13 +174,13 @@ class Keypad extends Component {
               <View style={{ flexDirection: "row", justifyContent: "space-around", width: '70%', alignSelf: 'center' }} >
 
                 <TouchableOpacity activeOpacity={0.5} onPress={() => { let dialNumber = this.state.dialNumber + '*'; this.setState({ dialNumber: dialNumber }) }}>
-                  <View style={{ width: width / 7, height: width / 7, borderRadius: (width / 7) / 2, backgroundColor: '#f1f1f1', justifyContent: 'center', alignItems: 'center' }}>
+                  <View style={{ width: width / 6, height: width / 6, borderRadius: (width / 6) / 2, backgroundColor: '#f1f1f1', justifyContent: 'center', alignItems: 'center' }}>
                     <Text style={{ fontSize: fontScale * 30, color: 'black' }}>*</Text>
                   </View>
                 </TouchableOpacity>
 
                 <TouchableOpacity activeOpacity={0.5} onLongPress={() => { let dialNumber = this.state.dialNumber + '+'; this.setState({ dialNumber: dialNumber }) }} onPress={() => { let dialNumber = this.state.dialNumber + JSON.parse('0'); this.setState({ dialNumber: dialNumber }) }}>
-                  <View style={{ width: width / 7, height: width / 7, borderRadius: (width / 7) / 2, backgroundColor: '#f1f1f1', justifyContent: 'center', alignItems: 'center' }}>
+                  <View style={{ width: width / 6, height: width / 6, borderRadius: (width / 6) / 2, backgroundColor: '#f1f1f1', justifyContent: 'center', alignItems: 'center' }}>
                     <Text style={{ fontSize: fontScale * 30, color: 'black' }}>0</Text>
                     <View style={{ flexDirection: 'row' }}>
                       <Text style={{ fontSize: fontScale * 10, color: 'black' }}>+</Text>
@@ -189,7 +189,7 @@ class Keypad extends Component {
                 </TouchableOpacity>
 
                 <TouchableOpacity activeOpacity={0.5} onPress={() => { let dialNumber = this.state.dialNumber + '#'; this.setState({ dialNumber: dialNumber }) }}>
-                  <View style={{ width: width / 7, height: width / 7, borderRadius: (width / 7) / 2, backgroundColor: '#f1f1f1', justifyContent: 'center', alignItems: 'center' }}>
+                  <View style={{ width: width / 6, height: width / 6, borderRadius: (width / 6) / 2, backgroundColor: '#f1f1f1', justifyContent: 'center', alignItems: 'center' }}>
                     <Text style={{ fontSize: fontScale * 30, color: 'black' }}>#</Text>
                   </View>
                 </TouchableOpacity>
@@ -197,8 +197,8 @@ class Keypad extends Component {
               </View>
 
               <View>
-                <TouchableOpacity activeOpacity={0.5} onPress={() => this.props.navigation.navigate('CallScreen')} style={{ width: width / 7, height: width / 7, borderRadius: (width / 6) / 2, alignSelf: 'center' }}>
-                  <Image source={require('../../../assets/Android/4x/callxxxhdpi.png')} style={{ width: width / 7, height: width / 7, borderRadius: (width / 6) / 2, alignSelf: 'center' }} />
+                <TouchableOpacity activeOpacity={0.5} onPress={() => this.props.navigation.navigate('CallScreen')} style={{ width: width / 6, height: width / 6, borderRadius: (width / 6) / 2, alignSelf: 'center' }}>
+                  <Image source={require('../../../assets/Android/4x/callxxxhdpi.png')} style={{ width: width / 6, height: width / 6, borderRadius: (width / 6) / 2, alignSelf: 'center' }} />
                 </TouchableOpacity>
               </View>
 

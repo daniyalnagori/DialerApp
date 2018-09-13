@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Picker, TouchableOpacity, PanResponder, Image, Dimensions } from 'react-native';
 import * as NB from 'native-base';
 
-const { fontScale } = Dimensions.get('window')
+const { fontScale, width, height } = Dimensions.get('window')
 
 export default class Dropdown extends React.Component {
     constructor(props) {
@@ -54,7 +54,8 @@ export default class Dropdown extends React.Component {
                     <View style={{ position: 'relative', elevation: 1, flexDirection: 'row', justifyContent: 'space-between', width: '95%' }}>
                         <Text style={{ color: '#999999', fontSize: fontScale * 14 }}>{!this.state.dropDown ? this.state.placeholder : " "}</Text>
                         {/* <Image source={Icons.dropDown} style={{ height: 6, width: 12, resizeMode: 'contain' }} /> */}
-                        <NB.Icon name="md-arrow-dropdown" style={{ color: '#ef3f7d', fontSize: 20 }} />
+                        {/* <NB.Icon name="md-arrow-dropdown" style={{ color: '#ef3f7d', fontSize: 20 }} /> */}
+                        <Image source={require('../../../assets/Android/4x/down-arrow.png')} style={{ width: width / 35, height: height / 58 }} />
                     </View>
                 </TouchableOpacity>
                 {this.state.dropDown && <View style={this.props.itemView}>

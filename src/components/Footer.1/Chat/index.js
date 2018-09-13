@@ -44,16 +44,18 @@ class Chat extends Component {
             <Left>
               <Text style={{ color: '#4d4d4d' }}>Broadcast List</Text>
             </Left>
+
             <Right>
-              <View style={{ width: '110%', flexDirection: 'row', justifyContent: 'space-between' }}>
-                <View style={{ borderRadius: (width / 24) / 2, width: width / 24, height: width / 24, alignItems: "center", borderColor: '#ef3f7d', borderWidth: 1 }}>
-                  <Icon style={{ color: '#ef3f7d', fontSize: fontScale * 15 }} name="add" />
+              <View style={{ width: '120%', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginRight: '2%' }}>
+                <View style={{ borderRadius: (width / 24) / 2, width: width / 24, height: width / 24, alignItems: "center", borderColor: '#ef3f7d', borderWidth: 1, alignSelf: 'center', justifyContent: 'center' }}>
+                  <Icon style={{ color: '#ef3f7d', fontSize: fontScale * 15, alignSelf: 'center' }} name="add" />
                 </View>
-                <View style={{ alignItems: 'flex-end' }}>
+                <View>
                   <Text style={{ color: '#4d4d4d' }}>New Group</Text>
                 </View>
               </View>
             </Right>
+
           </ListItem>
 
           <List>

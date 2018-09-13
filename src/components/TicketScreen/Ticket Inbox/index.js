@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Picker, Text, View, Dimensions, Image, TouchableOpacity } from 'react-native';
+import { Platform, StyleSheet, Picker, Text, View, Dimensions, Image, TouchableOpacity, ScrollView } from 'react-native';
 import { Header, Input, Icon, } from 'native-base'
 const { height, width, fontScale } = Dimensions.get('window');
 import Dropdown from './../DropDown/dropdown'
@@ -44,7 +44,7 @@ class TicketInbox extends Component {
                                     <Input style={{ textAlign: 'center', color: "#000000", minHeight: height / 14, fontSize: fontScale * 10 }} placeholder="Search..." placeholderTextColor="#00000" />
                                 </View>
                                 <View style={{ marginRight: '4%' }}>
-                                    <Image source={require('../../../assets/Android/4x/settingsxxxhdpi.png')} style={{ width: width / 25, height: height / 40 }} />
+                                    <Image source={require('../../../assets/Android/4x/settingsxxxhdpi.png')} style={{ width: width / 24, height: height / 40 }} />
                                 </View>
                             </View>
 
@@ -133,8 +133,10 @@ class TicketInbox extends Component {
                     </View>
 
                     <View style={{ width: '100%', height: '100%' }}>
-                        {this.state.listView ? <ListView /> : null}
-                        {this.state.gridView ? <GridView /> : null}
+                        <ScrollView style={{ width: '100%', height: '100%' }}>
+                            {this.state.listView ? <ListView /> : null}
+                            {this.state.gridView ? <GridView /> : null}
+                        </ScrollView>
                     </View>
 
                 </View >

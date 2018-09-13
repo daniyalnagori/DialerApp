@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Picker, Text, View, Dimensions, Image, TouchableOpacity } from 'react-native';
+import { Platform, StyleSheet, Picker, Text, View, Dimensions, Image, TouchableOpacity, ScrollView } from 'react-native';
 import { Header, Input, Icon, } from 'native-base'
 const { height, width, fontScale } = Dimensions.get('window');
 import Dropdown from './../../DropDown/dropdown'
@@ -172,6 +172,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#EEF0F5',
+        height: height
     },
 });
 
