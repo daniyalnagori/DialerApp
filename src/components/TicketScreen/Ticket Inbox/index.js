@@ -75,32 +75,34 @@ class TicketInbox extends Component {
                                     <View>
                                         <Text style={{ color: '#999999', fontSize: fontScale * 12 }}>Filter by:</Text>
                                     </View>
-                                    <View style={{ minHeight: '10%', width: '40%', fontSize: 10, position: "relative", overflow: "visible" }}>
-                                        <Dropdown
-                                            placeholder="Update"
-                                            itemView={styles.itemView}
-                                            items={[
-                                                "Update1", "Update2", "Update3"
-                                            ]}
-                                            onValue={(value) => {
-                                                let val;
-                                                switch (value) {
-                                                    case "Update1":
-                                                        val = "Update1";
-                                                        break;
-                                                    case "Update2":
-                                                        val = "Update1";
-                                                        break;
-                                                    case "Gain Weight":
-                                                        val = "gain";
-                                                        break;
-                                                    default:
-                                                        val = value
-                                                        break;
-                                                }
-                                                this.setState({ dropdownValue: val })
-                                            }}
-                                        />
+                                    <View style={{ Height: '12%', width: '55%', fontSize: 10, position: "relative", overflow: "visible", justifyContent: 'center', alignItems: 'center', borderColor: '#e6e6e6', borderWidth: 1, borderRadius: width / 80 }}>
+                                        <View style={{ height: '90%', width: '90%', justifyContent: 'center', alignItems: 'center' }}>
+                                            <Dropdown
+                                                placeholder="Update"
+                                                itemView={styles.itemView}
+                                                items={[
+                                                    "Update1", "Update2", "Update3"
+                                                ]}
+                                                onValue={(value) => {
+                                                    let val;
+                                                    switch (value) {
+                                                        case "Update1":
+                                                            val = "Update1";
+                                                            break;
+                                                        case "Update2":
+                                                            val = "Update1";
+                                                            break;
+                                                        case "Gain Weight":
+                                                            val = "gain";
+                                                            break;
+                                                        default:
+                                                            val = value
+                                                            break;
+                                                    }
+                                                    this.setState({ dropdownValue: val })
+                                                }}
+                                            />
+                                        </View>
                                     </View>
                                 </View>
 

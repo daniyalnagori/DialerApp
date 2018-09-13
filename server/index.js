@@ -1,8 +1,8 @@
 // var app = require('express')();
 // const bodyParser = require('body-parser');
 
-// const accountSid = 'AC6ce6709a732d467433d6709ec16c854a';
-// const authToken = '08e202ca9190e1d53d35707ccad70feb';
+// const accountSid = '';
+// const authToken = '';
 // app.use(bodyParser.urlencoded({ extended: false }));
 
 // app.use(bodyParser.json());
@@ -75,11 +75,11 @@ app.use(cors())
 
 app.get('/token', (req, res) => {
     // put your Twilio API credentials here
-    const accountSid = 'AC6ce6709a732d467433d6709ec16c854a';
-    const authToken = '08e202ca9190e1d53d35707ccad70feb';
+    const accountSid = '';
+    const authToken = '';
 
     // put your Twilio Application Sid here
-    const appSid = 'AP84a57d90641514aacc7ca95bc417accc';
+    const appSid = '';
 
     const capability = new ClientCapability({
         accountSid: accountSid,

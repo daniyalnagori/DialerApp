@@ -81,7 +81,7 @@ class TicketScreen extends Component {
                                 </View>
                             </TouchableOpacity>
                             <TouchableOpacity onPress={() => { this.setState({ profilebg: '#ffffff', profilecol: '#4d4d4d', ticketbg: '#ffffff', ticketcol: '#4d4d4d', notebg: '#ffffff', notecol: '#4d4d4d', inboxbg: '#ef3f7d', inboxcol: '#ffffff', userProfile: false, ticketDuo: false, myNote: false, ticketInbox: true }) }}>
-                                <View style={{ fontSize: fontScale * 11, backgroundColor: this.state.inboxbg, alignItems: 'center', height: '100%', justifyContent: 'center', paddingLeft: '1.5%', paddingRight: '1.5%' }}>
+                                <View style={{ fontSize: fontScale * 11, backgroundColor: this.state.inboxbg, alignItems: 'center', height: '100%', justifyContent: 'center', paddingLeft: '1.5%', paddingRight: '1.5%' }/*[styles.triangle]*/} >
                                     <Text style={{ fontSize: fontScale * 11, color: this.state.inboxcol }}>Ticket Inbox</Text>
                                 </View>
                             </TouchableOpacity>
@@ -122,6 +122,21 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#eef0f5',
     },
+    triangle: {
+        width: 0,
+        height: 0,
+        backgroundColor: 'transparent',
+        borderStyle: 'solid',
+        borderLeftWidth: 10,
+        borderRightWidth: 10,
+        borderBottomWidth: 20,
+        borderLeftColor: 'transparent',
+        borderRightColor: 'transparent',
+        borderBottomColor: 'red',
+        transform: [
+            { rotate: '-180deg' }
+        ]
+    }
 });
 
 export default TicketScreen;

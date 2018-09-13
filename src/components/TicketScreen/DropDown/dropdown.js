@@ -51,11 +51,9 @@ export default class Dropdown extends React.Component {
         return (
             <View style={[this.props.containerSyle, { position: 'relative', width: '100%' }]}>
                 <TouchableOpacity onPress={() => { window.onBodyPress && window.onBodyPress(); this.setState({ dropDown: !this.state.dropDown }) }}>
-                    <View style={{ position: 'relative', elevation: 1, flexDirection: 'row', justifyContent: 'space-between', width: '95%' }}>
-                        <Text style={{ color: '#999999', fontSize: fontScale * 14 }}>{!this.state.dropDown ? this.state.placeholder : " "}</Text>
-                        {/* <Image source={Icons.dropDown} style={{ height: 6, width: 12, resizeMode: 'contain' }} /> */}
-                        {/* <NB.Icon name="md-arrow-dropdown" style={{ color: '#ef3f7d', fontSize: 20 }} /> */}
-                        <Image source={require('../../../assets/Android/4x/down-arrow.png')} style={{ width: width / 35, height: height / 58 }} />
+                    <View style={{ position: 'relative', elevation: 1, flexDirection: 'row', justifyContent: 'space-between', width: '95%', alignItems: 'center' }}>
+                        <Text style={{ color: '#999999', fontSize: fontScale * 12 }}>{!this.state.dropDown ? this.state.placeholder : " "}</Text>
+                        <Image source={require('../../../assets/Android/4x/down-arrow.png')} style={{ width: width / 40, height: height / 64 }} />
                     </View>
                 </TouchableOpacity>
                 {this.state.dropDown && <View style={this.props.itemView}>
