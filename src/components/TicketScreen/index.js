@@ -34,7 +34,7 @@ class TicketScreen extends Component {
 
                     <View style={{ backgroundColor: '#ffffff', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', height: '5%' }}>
                         <View style={{ width: '20%', alignItems: 'center' }}>
-                            <TouchableOpacity onPress={() => this.props.navigation.navigate('SignIn')}>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('Footer')}>
                                 <Image style={{ width: width / 8.3, height: height / 28.5 }} source={require('../../assets/Android/4x/logo.png')}></Image>
                             </TouchableOpacity>
                         </View>
