@@ -63,7 +63,7 @@ export default function authReducer(state = initialState, action) {
                 ...state,
                 isLoading: false,
                 isError: true,
-                error: action.error
+                error: action.payload
             }
         case LOGOUT:
             return {

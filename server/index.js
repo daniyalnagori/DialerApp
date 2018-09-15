@@ -14,7 +14,7 @@
 // //     console.log(req.body.numbers)
 // //     return client.messages.create({
 // //         to: req.body.numbers,
-// //         from: '+13082103058',
+// //         from: '',
 // //         body: 'Testing for Dialer App'
 // //     })
 // //         .then((message) => {
@@ -34,7 +34,7 @@
 //         .create({
 //             url: 'http://demo.twilio.com/docs/voice.xml',
 //             to: req.body.CallNumber,
-//             from: '+13082103058'
+//             from: ''
 //         })
 //         .then(call => {
 //             console.log(call.sid)

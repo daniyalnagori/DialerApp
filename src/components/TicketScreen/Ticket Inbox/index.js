@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Picker, Text, View, Dimensions, Image, TouchableOpacity, ScrollView } from 'react-native';
+import { Platform, StyleSheet, Picker, Text, View, Dimensions, Image, TouchableOpacity, ScrollView, AsyncStorage } from 'react-native';
 import { Header, Input, Icon, } from 'native-base'
 const { height, width, fontScale } = Dimensions.get('window');
-import Dropdown from './../DropDown/dropdown'
+import Dropdown from './../DropDown/dropdown';
+import ApiAction from './../../../store/actions/ApiAction';
+import { connect } from 'react-redux';
 import ListView from './ListView'
 import GridView from './GridView'
 
@@ -25,18 +27,25 @@ class TicketInbox extends Component {
         });
     }
 
+    componentDidMount() {
+        AsyncStorage.getItem('userID').then((id) => {
+            console.log(id, 'component')
+            this.props.WorkSpaceData(id)
+        })
+    }
+
     render() {
         return (
             <View style={styles.container}>
                 <View style={{ width: '100%', height: '100%', backgroundColor: '#eef0f5' }}>
 
-                    <View style={{ backgroundColor: this.state.bgColorMain, height: '20%' }}>
+                    <View style={{ backgroundColor: this.state.bgColorMain, /*height: '20%'*/ height: '6%', justifyContent: 'center' }}>
 
-                        <View style={{ height: '55%', borderBottomLeftRadius: width / 70, borderBottomRightRadius: width / 70, backgroundColor: '#ffffff' }}>
+                        <View style={{ /*height: '55%'*/height: '100%', borderBottomLeftRadius: width / 70, borderBottomRightRadius: width / 70, backgroundColor: '#ffffff', justifyContent: 'center' }}>
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', height: '55%' }}>
                                 <View style={{ width: '60%' }}>
                                     <Text style={{ color: '#000000', fontSize: fontScale * 15, marginLeft: '4%' }}>
-                                        My Tickets
+                                        {/*My Tickets*/}My WorkSpace
                             </Text>
                                 </View>
                                 <View style={{ height: '90%', width: '20%', justifyContent: "center", flexDirection: "row", alignItems: "center" }} >
@@ -48,7 +57,7 @@ class TicketInbox extends Component {
                                 </View>
                             </View>
 
-                            <View style={{ justifyContent: 'space-between', flexDirection: 'row', alignItems: 'center', width: '30%', marginLeft: '2%', height: '45%' }}>
+                            {/* <View style={{ justifyContent: 'space-between', flexDirection: 'row', alignItems: 'center', width: '30%', marginLeft: '2%', height: '45%' }}>
                                 <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
                                     <Image source={require('../../../assets/Android/4x/edit-mem-icon.png')} style={{ width: width / 35, height: height / 60 }} />
                                     <Text style={{ fontSize: fontScale * 12, marginLeft: '5%', alignSelf: 'center' }}>25</Text>
@@ -64,11 +73,11 @@ class TicketInbox extends Component {
                             </View>
 
                             <View style={{ borderColor: '#ffffff', borderBottomColor: '#eef0f5', borderWidth: 1, width: '95%', alignSelf: 'center' }}>
-                            </View>
+                            </View> */}
 
                         </View>
 
-                        <View style={{ justifyContent: 'center', alignItems: 'center', width: '100%', height: '45%' }}>
+                        {/* <View style={{ justifyContent: 'center', alignItems: 'center', width: '100%', height: '45%' }}>
 
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignContent: 'center', alignItems: 'center', width: '100%', height: '65%', backgroundColor: '#ffffff', borderRadius: width / 70 }}>
                                 <View style={{ width: '40%', marginLeft: '2%', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -131,7 +140,7 @@ class TicketInbox extends Component {
 
                             </View>
 
-                        </View>
+                        </View> */}
                     </View>
 
                     <View style={{ width: '100%', height: '100%' }}>
@@ -165,4 +174,20 @@ const styles = StyleSheet.create({
     },
 });
 
-export default TicketInbox;
+function mapStateToProp(state) {
+    return ({
+        // SignInSuccess: state.userAuth.authUser,
+        // isLoggedIn: state.userAuth.isLoggedIn,
+        // isError: state.userAuth.isError,
+        // error: state.userAuth.error
+    })
+}
+function mapDispatchToProp(dispatch) {
+    return {
+        WorkSpaceData: (id) => {
+            dispatch(ApiAction.WorkSpaceData(id))
+        }
+    };
+}
+
+export default connect(mapStateToProp, mapDispatchToProp)(TicketInbox);

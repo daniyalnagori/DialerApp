@@ -6,6 +6,14 @@ import {
 
 export default class AuthActions {
 
+    static SignIn(obj) {
+        return {
+            type: SIGNIN,
+            payload: obj
+        }
+    }
+
+
     static signup(user) {
         return {
             type: SIGNUP,
@@ -27,12 +35,7 @@ export default class AuthActions {
         }
     }
 
-    static signin(user) {
-        return {
-            type: SIGNIN,
-            payload: user
-        }
-    }
+
 
     static signinSuccess(data) {
         return {

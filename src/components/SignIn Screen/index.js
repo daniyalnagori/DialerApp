@@ -4,7 +4,6 @@ import {
     StyleSheet,
     Text,
     Image,
-    // Icon,
     TextInput,
     View,
     TouchableNativeFeedback,
@@ -13,35 +12,12 @@ import {
     ScrollView,
     ImageBackground,
     Button,
+    NativeModules,
+    AsyncStorage
 } from 'react-native';
 import { CheckBox, ListItem, Icon } from "native-base";
-// import Amplify from '../../../node_modules/aws-amplify';
-// import { Col, Row, Grid } from "react-native-easy-grid";
-import Amplify, { Auth } from 'aws-amplify'
-import config from './aws-exports'
-Amplify.configure(config)
-// import { Auth } from 'aws-amplify-react-native'
-
-// import {
-//     Config,
-//     CognitoIdentityCredentials
-// } from 'aws-sdk/dist/aws-sdk-react-native';
-
-// import {
-//     AuthenticationDetails,
-//     CognitoUser,
-//     CognitoUserPool,
-//     CognitoUserAttribute
-// } from 'react-native-aws-cognito-js';
-
-// const appConfig = {
-//     region: '',
-//     IdentityPoolId: '',
-//     UserPoolId: 'us-east-1_Mr98zHlUu',
-//     ClientId: '1an3c969el9eldlcsr76t84cgn',
-// }
-
-// Config.region = appConfig.region;
+import { connect } from 'react-redux';
+import authAction from './../../store/actions/authActions'
 
 const { height, width, fontScale } = Dimensions.get('window');
 
@@ -51,84 +27,43 @@ class SignIn extends Component {
         this.state = {
             checkbox: true,
             icon: 'checkmark',
-            username: 'hello@gmail.com',
-            password: 'Hello122334455!'
+            username: '',
+            password: ''
         }
+
     }
     static navigationOptions = {
         title: "App"
     };
 
-    // submit = () => {
-    //     const { username, password } = this.state;
-    //     const authenticationData = {
-    //         Username: username,
-    //         Password: password,
-    //     };
-    //     console.log(authenticationData)
-    //     const authenticationDetails = new AuthenticationDetails(authenticationData);
-    //     const poolData = {
-    //         UserPoolId: appConfig.UserPoolId,
-    //         ClientId: appConfig.ClientId
-    //     };
-    //     console.log(poolData)
-    //     const userPool = new CognitoUserPool(poolData);
-    //     const userData = {
-    //         Username: Username,
-    //         Pool: userPool
-    //     };
-    //     const cognitoUser = new CognitoUser(userData);
-    //     cognitoUser.authenticateUser(authenticationDetails, {
-    //         onSuccess: (result) => {
-    //             console.log('access token + ' + result.getAccessToken().getJwtToken());
-    //             Config.credentials = new CognitoIdentityCredentials({
-    //                 IdentityPoolId: appConfig.IdentityPoolId,
-    //             });
-    //             alert('Success');
-    //             console.log(Config.credentials);
-    //         },
-    //         onFailure: (err) => {
-    //             alert(err);
-    //         },
-    //     });
-    // }
-
-
-    signIn123 = () => {
-        console.log('call')
+    submit = () => {
         let { username, password } = this.state
-        Auth.signIn(username, password)
-            .then(user => {
-                // this.setState({ user })
-                console.log(user)
-            })
-            .catch(err => {
-                console.log('error signing in: ', err)
-            })
-    }
+        let obj = {
+            username: username,
+            password: password
+        }
+        console.log('hello')
+        this.props.SignInCredentials(obj)
+    };
 
-    signUp = () => {
-        Auth.signUp({
-            username: 'hello@gmail.com',
-            password: 'Hello122334455!',
-            attributes: {
-                phone_number: '+921234567891',
-                email: 'hello@gmail.com'
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.isLoggedIn) {
+            // this.props.navigation.navigate('TicketScreen')
+            alert('success')
+            if (nextProps.SignInSuccess.getAccessToken().payload.sub) {
+                console.log(nextProps.SignInSuccess.getAccessToken().payload.sub)
+                AsyncStorage.setItem('userID', nextProps.SignInSuccess.getAccessToken().payload.sub).then((a) => console.log(a))
+                // AsyncStorage.getItem('userID').then((b)=>console.log(b))
             }
-        })
-            .then(res => {
-                console.log('successful signup: ', res)
-            })
-            .catch(err => {
-                console.log('error signing up: ', err)
-            })
+        }
+        if (nextProps.isError) {
+            alert(nextProps.error)
+        }
     }
 
     render() {
-        console.log('username', this.state.username)
-        console.log('Passowrd', this.state.password)
         return (
-            <View style={styles.container}>
+            <View style={styles.container} >
                 <ImageBackground source={require('../../assets/Android/4x/bg.jpg')} style={{ width: '100%', height: '100%' }}>
                     <View style={{ flex: 1, alignItems: 'center' }}>
                         <View style={{ height: '15%', justifyContent: 'center', alignItems: 'center' }}>
@@ -142,11 +77,11 @@ class SignIn extends Component {
                             </View>
 
                             <View style={{ height: '10%' }}>
-                                <TextInput placeholderTextColor='#999999' placeholder='       Email Address' underlineColorAndroid='transparent' onChangeText={username => this.setState({ username })} style={{ borderRadius: width / 70, alignSelf: 'center', borderColor: '#e6e6e6', borderWidth: 1, width: '80%' }} />
+                                <TextInput placeholderTextColor='#999999' value={this.state.username} placeholder='       Email Address' underlineColorAndroid='transparent' onChangeText={username => this.setState({ username })} style={{ borderRadius: width / 70, alignSelf: 'center', borderColor: '#e6e6e6', borderWidth: 1, width: '80%' }} />
                             </View>
 
                             <View style={{ height: '10%' }}>
-                                <TextInput placeholderTextColor='#999999' placeholder='       Password' secureTextEntry={true} underlineColorAndroid='transparent' onChangeText={password => this.setState({ password })} style={{ borderRadius: width / 70, alignSelf: 'center', borderColor: '#e6e6e6', borderWidth: 1, width: '80%' }} />
+                                <TextInput placeholderTextColor='#999999' value={this.state.password} placeholder='       Password' secureTextEntry={true} underlineColorAndroid='transparent' onChangeText={password => this.setState({ password })} style={{ borderRadius: width / 70, alignSelf: 'center', borderColor: '#e6e6e6', borderWidth: 1, width: '80%' }} />
                             </View>
 
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between', width: '80%', alignSelf: 'center', alignItems: 'center' }}>
@@ -166,7 +101,7 @@ class SignIn extends Component {
                             </View>
 
                             <View style={{ width: '80%', alignSelf: 'center', height: '8%' }}>
-                                <TouchableOpacity activeOpacity={0.5} onPress={this.signIn123} style={{ height: '100%', backgroundColor: '#ef3f7d', justifyContent: 'center', alignItems: 'center', borderRadius: width / 70 }}>
+                                <TouchableOpacity activeOpacity={0.5} onPress={this.submit} style={{ height: '100%', backgroundColor: '#ef3f7d', justifyContent: 'center', alignItems: 'center', borderRadius: width / 70 }}>
                                     <Text style={{ color: '#ffffff' }}>Signin</Text>
                                 </TouchableOpacity>
                             </View>
@@ -212,4 +147,21 @@ const styles = StyleSheet.create({
     },
 });
 
-export default SignIn;
+
+function mapStateToProp(state) {
+    return ({
+        SignInSuccess: state.userAuth.authUser,
+        isLoggedIn: state.userAuth.isLoggedIn,
+        isError: state.userAuth.isError,
+        error: state.userAuth.error
+    })
+}
+function mapDispatchToProp(dispatch) {
+    return {
+        SignInCredentials: (obj) => {
+            dispatch(authAction.SignIn(obj))
+        }
+    };
+}
+
+export default connect(mapStateToProp, mapDispatchToProp)(SignIn);

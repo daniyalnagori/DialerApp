@@ -53,6 +53,7 @@
 		FA55448295B34AB680E62F29 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 988C6B7DBD5046CF83E7E7E0 /* SimpleLineIcons.ttf */; };
 		E48F5D40A2B144FAB315D46C /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87B7E45AAF8B45EF87F8524D /* Zocial.ttf */; };
 		E9B37E4C31E246BA8E740CAE /* libRCTWebRTC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B6B40C582D41F79D49C71D /* libRCTWebRTC.a */; };
+		887D7557D20B4DD482786849 /* libRNAWSCognito.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D2BD199E774D748D7984DC /* libRNAWSCognito.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -376,6 +377,8 @@
 		87B7E45AAF8B45EF87F8524D /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		A7DCA703A04540EFAF9799FC /* RCTWebRTC.xcodeproj */ = {isa = PBXFileReference; name = "RCTWebRTC.xcodeproj"; path = "../node_modules/react-native-webrtc/ios/RCTWebRTC.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		68B6B40C582D41F79D49C71D /* libRCTWebRTC.a */ = {isa = PBXFileReference; name = "libRCTWebRTC.a"; path = "libRCTWebRTC.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		CAE7B340CCD74305B555B138 /* RNAWSCognito.xcodeproj */ = {isa = PBXFileReference; name = "RNAWSCognito.xcodeproj"; path = "../node_modules/amazon-cognito-identity-js/ios/RNAWSCognito.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		E4D2BD199E774D748D7984DC /* libRNAWSCognito.a */ = {isa = PBXFileReference; name = "libRNAWSCognito.a"; path = "libRNAWSCognito.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -406,6 +409,7 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				C2D63645B2AF48A3B101C493 /* libReactNativeNavigation.a in Frameworks */,
 				E9B37E4C31E246BA8E740CAE /* libRCTWebRTC.a in Frameworks */,
+				887D7557D20B4DD482786849 /* libRNAWSCognito.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +598,7 @@
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				7BD7A24AFFDE4604821C6C08 /* ReactNativeNavigation.xcodeproj */,
 				A7DCA703A04540EFAF9799FC /* RCTWebRTC.xcodeproj */,
+				CAE7B340CCD74305B555B138 /* RNAWSCognito.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1258,12 +1263,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-navigation\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-webrtc\ios\RCTWebRTC/**",
+					"$(SRCROOT)\..\node_modules\amazon-cognito-identity-js\ios/**",
 				);
 			};
 			name = Debug;
@@ -1285,12 +1290,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-navigation\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-webrtc\ios\RCTWebRTC/**",
+					"$(SRCROOT)\..\node_modules\amazon-cognito-identity-js\ios/**",
 				);
 			};
 			name = Release;
@@ -1314,6 +1319,7 @@
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-navigation\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-webrtc\ios\RCTWebRTC/**",
+					"$(SRCROOT)\..\node_modules\amazon-cognito-identity-js\ios/**",
 				);
 			};
 			name = Debug;
@@ -1336,6 +1342,7 @@
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-navigation\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-webrtc\ios\RCTWebRTC/**",
+					"$(SRCROOT)\..\node_modules\amazon-cognito-identity-js\ios/**",
 				);
 			};
 			name = Release;
@@ -1366,12 +1373,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-navigation\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-webrtc\ios\RCTWebRTC/**",
+					"$(SRCROOT)\..\node_modules\amazon-cognito-identity-js\ios/**",
 				);
 			};
 			name = Debug;
@@ -1402,12 +1409,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-navigation\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-webrtc\ios\RCTWebRTC/**",
+					"$(SRCROOT)\..\node_modules\amazon-cognito-identity-js\ios/**",
 				);
 			};
 			name = Release;
@@ -1437,12 +1444,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-navigation\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-webrtc\ios\RCTWebRTC/**",
+					"$(SRCROOT)\..\node_modules\amazon-cognito-identity-js\ios/**",
 				);
 			};
 			name = Debug;
@@ -1472,12 +1479,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-navigation\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-webrtc\ios\RCTWebRTC/**",
+					"$(SRCROOT)\..\node_modules\amazon-cognito-identity-js\ios/**",
 				);
 			};
 			name = Release;

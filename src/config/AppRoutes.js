@@ -18,15 +18,15 @@ const Drawer = DrawerNavigator({
 }, { drawerWidth: 200 })
 
 const NavigationApp = StackNavigator({
-  SignIn: {
-    screen: SignIn,
+  TicketScreen: {
+    screen: TicketScreen,
     navigationOptions: {
       headerMode: "none",
       header: null,
     },
   },
-  TicketScreen: {
-    screen: TicketScreen,
+  SignIn: {
+    screen: SignIn,
     navigationOptions: {
       headerMode: "none",
       header: null,
