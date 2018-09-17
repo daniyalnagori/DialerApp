@@ -6,6 +6,7 @@ import FooterTabs from './Footer/index'
 import FooterTabs1 from './Footer.1/index'
 import SignIn from './SignIn Screen'
 import TicketScreen from './TicketScreen'
+import FooterTab3 from './Footer3'
 export {
     App,
     CallingScreen,
@@ -14,5 +15,6 @@ export {
     FooterTabs,
     FooterTabs1,
     SignIn,
-    TicketScreen
+    TicketScreen,
+    FooterTab3
 };

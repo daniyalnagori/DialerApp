@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  App, CallingScreen, CallScreen, DialerScreen, FooterTabs, FooterTabs1, SignIn, TicketScreen
+  App, CallingScreen, CallScreen, DialerScreen, FooterTabs, FooterTabs1, SignIn, TicketScreen, FooterTab3
 } from './../components/index';
 import { StackNavigator, DrawerNavigator } from "react-navigation";
 
@@ -18,6 +18,13 @@ const Drawer = DrawerNavigator({
 }, { drawerWidth: 200 })
 
 const NavigationApp = StackNavigator({
+  FooterTab3: {
+    screen: FooterTab3,
+    navigationOptions: {
+      headerMode: "none",
+      header: null,
+    },
+  },
   TicketScreen: {
     screen: TicketScreen,
     navigationOptions: {

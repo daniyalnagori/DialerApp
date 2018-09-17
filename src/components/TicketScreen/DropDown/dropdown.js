@@ -51,7 +51,8 @@ export default class Dropdown extends React.Component {
         return (
             <View style={[this.props.containerSyle, { position: 'relative', width: '100%' }]}>
                 <TouchableOpacity onPress={() => { window.onBodyPress && window.onBodyPress(); this.setState({ dropDown: !this.state.dropDown }) }}>
-                    <View style={{ position: 'relative', elevation: 1, flexDirection: 'row', justifyContent: 'space-between', width: '95%', alignItems: 'center' }}>
+                    <View style={{ marginLeft: '2%', position: 'relative', elevation: 1, flexDirection: 'row', justifyContent: 'space-between', width: '95%', alignItems: 'center' }}>
+                        <Image source={require('../../../assets/Android/4x/settings_seclectedxxxhdpi.png')} style={{ width: width / 22, height: height / 35 }} />
                         <Text style={{ color: '#999999', fontSize: fontScale * 12 }}>{!this.state.dropDown ? this.state.placeholder : " "}</Text>
                         <Image source={require('../../../assets/Android/4x/down-arrow.png')} style={{ width: width / 40, height: height / 64 }} />
                     </View>
