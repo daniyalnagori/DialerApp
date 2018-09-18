@@ -6,7 +6,8 @@ import ApiEpic from './ApiEpic'
 const rootEpic = combineEpics(
     ApiEpic.CallEpic,
     AuthEpic.signinEpic,
-    ApiEpic.WorkSpaceDataEpic
+    ApiEpic.WorkSpaceDataEpic,
+    ApiEpic.CollaborationDataEpic
 );
 
 export default rootEpic;

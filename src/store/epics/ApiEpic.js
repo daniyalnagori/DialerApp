@@ -1,6 +1,7 @@
 import {
     CALLOBJ, CALLOBJ_SUCCESS, CALLOBJ_FAILURE,
-    WORKSPACE, WORKSPACE_SUCCESS, WORKSPACE_FAILURE
+    WORKSPACE, WORKSPACE_SUCCESS, WORKSPACE_FAILURE,
+    COLLABORATION, COLLABORATION_SUCCESS, COLLABORATION_FAILURE
 } from '../constants'
 import 'rxjs';
 import { Observable } from 'rxjs';
@@ -15,16 +16,13 @@ export default class ApiEpic {
     static CallEpic = (action$) => {
         return action$.ofType(CALLOBJ)
             .switchMap(() => {
-                console.log("asdasdasd")
                 return HttpService.get(Path.CAllAPI)
                     .map((response) => {
-                        console.log("asd123", response)
                         return {
                             type: CALLOBJ_SUCCESS,
                             payload: response
                         };
                     }).catch((error) => {
-                        console.log("asd", error)
                         return Observable.of({
                             type: CALLOBJ_FAILURE,
                             payload: error
@@ -37,18 +35,36 @@ export default class ApiEpic {
     static WorkSpaceDataEpic = (action$) => {
         return action$.ofType(WORKSPACE)
             .switchMap((payload) => {
-                console.log(payload, 'payload')
                 return HttpService.get(Path.WORKSPACE + payload.payload)
                     .map((response) => {
-                        console.log("asd123", response)
                         return {
-                            type: CALLOBJ_SUCCESS,
-                            payload: response
+                            type: WORKSPACE_SUCCESS,
+                            payload: response.response.data
                         };
                     }).catch((error) => {
-                        console.log("asd", error)
                         return Observable.of({
-                            type: CALLOBJ_FAILURE,
+                            type: WORKSPACE_FAILURE,
+                            payload: error
+                        });
+                    })
+            })
+    }
+
+
+    static CollaborationDataEpic = (action$) => {
+        return action$.ofType(COLLABORATION)
+            .switchMap((payload) => {
+                console.log(payload, 'payload')
+                return HttpService.get(Path.COLLABORATION + payload.payload)
+                    .map((response) => {
+                        console.log(response, 'hello1')
+                        return {
+                            type: COLLABORATION_SUCCESS,
+                            payload: response.response.data
+                        };
+                    }).catch((error) => {
+                        return Observable.of({
+                            type: COLLABORATION_FAILURE,
                             payload: error
                         });
                     })

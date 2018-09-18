@@ -1,5 +1,5 @@
 import {
-    CALLOBJ, WORKSPACE
+    CALLOBJ, WORKSPACE, COLLABORATION
 } from '../constants'
 
 export default class AuthActions {
@@ -12,9 +12,16 @@ export default class AuthActions {
     }
 
     static WorkSpaceData(id) {
-        console.log(id, 'action')
         return {
             type: WORKSPACE,
+            payload: id
+        }
+    }
+
+    static CollaborationData(id) {
+        console.log('colloabasdf', id)
+        return {
+            type: COLLABORATION,
             payload: id
         }
     }

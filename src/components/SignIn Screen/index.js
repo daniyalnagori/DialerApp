@@ -42,18 +42,15 @@ class SignIn extends Component {
             username: username,
             password: password
         }
-        console.log('hello')
         this.props.SignInCredentials(obj)
     };
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.isLoggedIn) {
-            // this.props.navigation.navigate('TicketScreen')
-            alert('success')
             if (nextProps.SignInSuccess.getAccessToken().payload.sub) {
                 console.log(nextProps.SignInSuccess.getAccessToken().payload.sub)
                 AsyncStorage.setItem('userID', nextProps.SignInSuccess.getAccessToken().payload.sub).then((a) => console.log(a))
-                // AsyncStorage.getItem('userID').then((b)=>console.log(b))
+                this.props.navigation.navigate('FooterTab3')
             }
         }
         if (nextProps.isError) {
@@ -67,7 +64,7 @@ class SignIn extends Component {
                 <ImageBackground source={require('../../assets/Android/4x/bg.jpg')} style={{ width: '100%', height: '100%' }}>
                     <View style={{ flex: 1, alignItems: 'center' }}>
                         <View style={{ height: '15%', justifyContent: 'center', alignItems: 'center' }}>
-                            <Image style={{ width: width / 3.8, height: height / 14 }} source={require('../../assets/Android/4x/logo.png')}></Image>
+                            <Image style={{ width: width / 3.8, height: height / 13 }} source={require('../../assets/Android/4x/logo.png')}></Image>
                         </View>
                         <View style={{ backgroundColor: '#ffffff', width: '75%', height: '70%', borderRadius: width / 50, padding: '1%', justifyContent: 'space-between' }}>
                             <View style={{ height: '10%' }}>

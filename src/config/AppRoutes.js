@@ -18,6 +18,13 @@ const Drawer = DrawerNavigator({
 }, { drawerWidth: 200 })
 
 const NavigationApp = StackNavigator({
+  SignIn: {
+    screen: SignIn,
+    navigationOptions: {
+      headerMode: "none",
+      header: null,
+    },
+  },
   FooterTab3: {
     screen: FooterTab3,
     navigationOptions: {
@@ -27,13 +34,6 @@ const NavigationApp = StackNavigator({
   },
   TicketScreen: {
     screen: TicketScreen,
-    navigationOptions: {
-      headerMode: "none",
-      header: null,
-    },
-  },
-  SignIn: {
-    screen: SignIn,
     navigationOptions: {
       headerMode: "none",
       header: null,
